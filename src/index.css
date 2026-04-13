@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔥 SCROLL SUAVE (AGORA VAI FUNCIONAR) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== FANAXIS THEME ===== */
+
+:root {
+  --background: 220 10% 12%; /* grafite escuro */
+  --foreground: 0 0% 100%; /* branco */
+
+  --primary: 25 100% 50%; /* laranja Fanaxis */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 220 10% 20%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 220 10% 25%;
+  --muted-foreground: 0 0% 70%;
+
+  --accent: 25 100% 50%;
+  --accent-foreground: 0 0% 100%;
+
+  --border: 220 10% 25%;
+  --input: 220 10% 25%;
+  --ring: 25 100% 50%;
+}
+
+/* DARK MODE FIXO */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+
+
+}

@@ -1,0 +1,25 @@
+/* 🔥 SCROLL SUAVE (efeito premium) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* RESET BÁSICO */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTAINER PRINCIPAL */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* REMOVE LIXO DE TEMPLATE (mantive só o essencial) */
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
