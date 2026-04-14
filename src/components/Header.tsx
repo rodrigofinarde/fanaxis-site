@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+// ✅ IMPORTAÇÃO CORRETA (VITE)
+import logoIcon from "@/assets/logo-icon.png";
+import logoText from "@/assets/logo-text.png";
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -8,19 +12,17 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1f1f1f] border-b border-[#FF6A00]/40">
       <div className="container flex items-center justify-between h-20">
 
-        {/* LOGO HORIZONTAL */}
+        {/* LOGO */}
         <a href="#" className="flex items-center gap-3">
           
-          {/* SIMBOLO */}
           <img
-            src="/src/assets/logo-icon.png"
+            src={logoIcon}
             alt="Fanaxis Icon"
             className="h-10 w-auto"
           />
 
-          {/* TEXTO */}
           <img
-            src="/src/assets/logo-text.png"
+            src={logoText}
             alt="Fanaxis"
             className="h-6 w-auto"
           />
