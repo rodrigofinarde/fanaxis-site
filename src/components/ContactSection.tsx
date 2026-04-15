@@ -62,8 +62,8 @@ const ContactSection = () => {
             </form>
 
             <div className="mt-8 pt-6 border-t border-border flex flex-wrap gap-6 text-sm text-muted-foreground">
-              <a href="mailto:rodrigofinarde@hotmail.com" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
-                <Mail className="w-4 h-4" /> rodrigofinarde@hotmail.com
+              <a href="mailto:rodrigo.finarde@fanaxis.com" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+                <Mail className="w-4 h-4" /> rodrigo.finarde@fanaxis.com
               </a>
               <a href="https://wa.me/5511924489409" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
                 <Phone className="w-4 h-4" /> (11) 92448-9409
