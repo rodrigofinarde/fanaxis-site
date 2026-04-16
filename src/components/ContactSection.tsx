@@ -1,6 +1,25 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [enviado, setEnviado] = useState(false);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const data = new FormData(form);
+
+    await fetch("https://formsubmit.co/ajax/rodrigo.finarde@fanaxis.com.br", {
+      method: "POST",
+      body: data,
+    });
+
+    setEnviado(true);
+    form.reset();
+  };
+
   return (
     <section id="contato" className="py-24 bg-secondary">
       <div className="container">
@@ -16,62 +35,87 @@ const ContactSection = () => {
           </p>
 
           <div className="card-technical bg-background rounded-lg p-8 text-left">
-            <form className="space-y-6">
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nova solicitação - Fanaxis" />
+
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">Nome</label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 bg-secondary border-none rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    name="nome"
+                    required
+                    className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
                     placeholder="Seu nome"
                   />
                 </div>
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">Empresa</label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 bg-secondary border-none rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    name="empresa"
+                    className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
                     placeholder="Nome da empresa"
                   />
                 </div>
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1.5">E-mail</label>
                 <input
                   type="email"
-                  className="w-full px-3 py-2 bg-secondary border-none rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  name="email"
+                  required
+                  className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
                   placeholder="seu@email.com"
                 />
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1.5">
                   Descreva o processo ou peça
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-3 py-2 bg-secondary border-none rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Material, dimensões, tolerâncias, volume de produção, gargalos atuais..."
+                  name="mensagem"
+                  required
+                  className="w-full px-3 py-2 bg-secondary rounded-sm text-sm resize-none"
+                  placeholder="Material, dimensões, tolerâncias..."
                 />
               </div>
+
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-primary-foreground font-medium text-sm rounded-sm hover:bg-primary/90 transition-colors"
+                className="w-full px-6 py-3 bg-primary text-white rounded-sm"
               >
                 Enviar Solicitação
               </button>
             </form>
 
-            <div className="mt-8 pt-6 border-t border-border flex flex-wrap gap-6 text-sm text-muted-foreground">
-              <a href="mailto:rodrigo.finarde@fanaxis.com.br" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+            {enviado && (
+              <div className="mt-6 p-4 bg-green-600 text-white rounded text-center">
+                ✅ Sua solicitação foi enviada! Em breve nosso departamento técnico entrará em contato.
+              </div>
+            )}
+
+            <div className="mt-8 pt-6 border-t flex flex-wrap gap-6 text-sm">
+              <a href="mailto:rodrigo.finarde@fanaxis.com.br" className="flex items-center gap-2">
                 <Mail className="w-4 h-4" /> rodrigo.finarde@fanaxis.com.br
               </a>
-              <a href="https://wa.me/5511924489409" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-foreground transition-colors">
+
+              <a href="https://wa.me/5511924489409" target="_blank" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" /> (11) 92448-9409
               </a>
-              <span className="inline-flex items-center gap-2">
+
+              <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" /> São Paulo, SP
               </span>
             </div>
+
           </div>
         </div>
       </div>
