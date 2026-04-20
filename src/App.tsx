@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Programacao5Eixos from "./pages/Programacao5Eixos";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +17,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* 🔥 SUA NOVA PÁGINA */}
+          <Route path="/programacao-cnc-5-eixos" element={<Programacao5Eixos />} />
+
+          {/* ⚠️ SEMPRE DEIXAR O NOTFOUND POR ÚLTIMO */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
