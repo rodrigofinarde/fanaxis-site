@@ -18,8 +18,7 @@ export const blogPosts: BlogPost[] = [
     category: "Digitalização",
     date: "07 Mai 2026",
     readTime: 5,
-    coverImage:
-      "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80",
+    coverImage: "/blog/digitalizacao-cover.png",
     content: `
       <p>A indústria de usinagem CNC está passando por uma transformação digital sem precedentes. Empresas que adotam a digitalização de processos estão conseguindo <strong>reduzir custos, aumentar a produtividade e eliminar gargalos</strong> que antes pareciam inevitáveis.</p>
 
@@ -57,8 +56,7 @@ export const blogPosts: BlogPost[] = [
     category: "Gêmeo Digital",
     date: "05 Mai 2026",
     readTime: 4,
-    coverImage:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    coverImage: "/blog/gemeo-digital-cover.png",
     content: `
       <p>Você já imaginou poder testar toda uma operação de usinagem no computador antes de ligar a máquina? É exatamente isso que um <strong>gêmeo digital</strong> permite fazer.</p>
 
@@ -106,8 +104,7 @@ export const blogPosts: BlogPost[] = [
     category: "Otimização",
     date: "02 Mai 2026",
     readTime: 4,
-    coverImage:
-      "https://images.unsplash.com/photo-1504222490345-c075b6008014?w=800&q=80",
+    coverImage: "/blog/setup-cnc-cover.png",
     content: `
       <p>O tempo de setup é um dos maiores vilões da produtividade na usinagem CNC. Cada minuto que a máquina está parada para troca de peça, ferramenta ou programa é um minuto que ela não está produzindo. Veja como <strong>reduzir drasticamente esse tempo</strong>.</p>
 
