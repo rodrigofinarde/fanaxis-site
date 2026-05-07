@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Programacao5Eixos from "./pages/Programacao5Eixos";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,10 @@ const App = () => (
 
           {/* 🔥 SUA NOVA PÁGINA */}
           <Route path="/programacao-cnc-5-eixos" element={<Programacao5Eixos />} />
+
+          {/* 📝 BLOG */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
 
           {/* ⚠️ SEMPRE DEIXAR O NOTFOUND POR ÚLTIMO */}
           <Route path="*" element={<NotFound />} />

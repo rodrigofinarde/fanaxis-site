@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // ✅ IMPORTAÇÃO CORRETA (VITE)
 import logoIcon from "@/assets/logo-icon.png";
@@ -13,37 +14,45 @@ const Header = () => {
       <div className="container flex items-center justify-between h-20">
 
         {/* LOGO */}
-        <a href="#" className="flex items-center gap-3">
-          
+        <Link to="/" className="flex items-center gap-3">
           <img
             src={logoIcon}
             alt="Fanaxis Icon"
             className="h-10 w-auto"
           />
-
           <img
             src={logoText}
             alt="Fanaxis"
             className="h-6 w-auto"
           />
-
-        </a>
+        </Link>
 
         {/* MENU */}
         <nav className="hidden md:flex items-center gap-8">
           {[
-            ["Serviços", "#servicos"],
-            ["Projetos", "#projetos"],
-            ["Métodos", "#metodos"],
-            ["Contato", "#contato"],
+            ["Serviços", "/#servicos"],
+            ["Projetos", "/#projetos"],
+            ["Métodos", "/#metodos"],
+            ["Blog", "/blog"],
+            ["Contato", "/#contato"],
           ].map(([label, href]) => (
-            <a
-              key={label}
-              href={href}
-              className="text-sm text-white/70 hover:text-white transition-colors"
-            >
-              {label}
-            </a>
+            href.startsWith("/") && !href.startsWith("/#") ? (
+              <Link
+                key={label}
+                to={href}
+                className="text-sm text-white/70 hover:text-white transition-colors"
+              >
+                {label}
+              </Link>
+            ) : (
+              <a
+                key={label}
+                href={href}
+                className="text-sm text-white/70 hover:text-white transition-colors"
+              >
+                {label}
+              </a>
+            )
           ))}
         </nav>
 
@@ -60,19 +69,31 @@ const Header = () => {
         <nav className="md:hidden bg-[#1f1f1f] border-t border-[#FF6A00]/20 py-4">
           <div className="container flex flex-col gap-4">
             {[
-              ["Serviços", "#servicos"],
-              ["Projetos", "#projetos"],
-              ["Métodos", "#metodos"],
-              ["Contato", "#contato"],
+              ["Serviços", "/#servicos"],
+              ["Projetos", "/#projetos"],
+              ["Métodos", "/#metodos"],
+              ["Blog", "/blog"],
+              ["Contato", "/#contato"],
             ].map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                onClick={() => setOpen(false)}
-                className="text-sm text-white/70 hover:text-white"
-              >
-                {label}
-              </a>
+              href.startsWith("/") && !href.startsWith("/#") ? (
+                <Link
+                  key={label}
+                  to={href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-white/70 hover:text-white"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-white/70 hover:text-white"
+                >
+                  {label}
+                </a>
+              )
             ))}
           </div>
         </nav>
