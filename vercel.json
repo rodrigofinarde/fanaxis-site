@@ -5,5 +5,11 @@
       "destination": "https://fanaxis.com.br/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
