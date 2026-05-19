@@ -11,6 +11,58 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "importancia-software-cav-vericut-usinagem-cnc",
+    title: "A Importância de um Software CAV (Computer Aided Verification) na Usinagem CNC",
+    excerpt:
+      "Descubra como um software CAV como o Vericut pode prevenir colisões, otimizar programas CNC e aumentar a produtividade da sua usinagem. Conheça a parceria Fanaxis + Vericut.",
+    category: "Verificação",
+    date: "19 Mai 2026",
+    readTime: 6,
+    coverImage: "/blog/vericut-5eixos.jpg",
+    content: `
+      <p>No mundo da usinagem CNC, a precisão é tudo. Pequenos erros podem levar a grandes prejuízos, desde o desperdício de material até danos caros em máquinas. É nesse cenário que entra em jogo o software <strong>CAV (Computer Aided Verification)</strong>, uma ferramenta essencial para garantir a segurança e a eficiência dos processos de fabricação.</p>
+
+      <img src=\"/blog/vericut-logo.jpg\" alt=\"Logo Vericut\" style=\"max-width: 300px; margin: 2rem auto; display: block;\" />
+
+      <h2>O Que é um Software CAV e Por Que Ele é Crucial?</h2>
+      <p>CAV, ou Verificação Assistida por Computador, refere-se a programas que simulam o processo de usinagem antes que ele aconteça na máquina real. Isso permite identificar e corrigir potenciais problemas, como colisões, erros de programação e falhas na remoção de material, em um ambiente virtual seguro.</p>
+      <p>Imagine poder testar cada movimento da sua máquina CNC, cada corte da ferramenta, sem o risco de danificar peças ou equipamentos. É exatamente isso que um software CAV oferece. Ele atua como um \"gêmeo digital\" da sua máquina, replicando seu comportamento com extrema fidelidade.</p>
+
+      <img src=\"/blog/vericut-simulacao.jpg\" alt=\"Simulação de usinagem no Vericut\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
+
+      <h2>Vericut: A Liderança em Simulação CNC</h2>
+      <p>Entre as diversas soluções de CAV disponíveis no mercado, o <strong>Vericut</strong> se destaca como líder e pioneiro. Desenvolvido pela CGTech, o Vericut é reconhecido mundialmente por sua capacidade de simular com precisão o código G da máquina CNC, garantindo que a simulação seja idêntica ao que ocorrerá na máquina física.</p>
+
+      <h3>Benefícios do Vericut:</h3>
+      <ul>
+        <li><strong>Prevenção de Colisões:</strong> O Vericut identifica e alerta sobre possíveis colisões entre a ferramenta, o porta-ferramentas, a peça e os componentes da máquina, evitando acidentes caros e perigosos.</li>
+        <li><strong>Otimização de Programas CNC:</strong> Além de verificar, o software otimiza os programas, reduzindo o tempo de ciclo e aumentando a vida útil das ferramentas.</li>
+        <li><strong>Redução de Desperdícios:</strong> Ao eliminar erros antes da usinagem, o Vericut minimiza o retrabalho e o descarte de peças.</li>
+        <li><strong>Aumento da Produtividade:</strong> Com a confiança de que o programa está correto, as máquinas podem operar com maior velocidade e eficiência.</li>
+        <li><strong>Integração Perfeita:</strong> O Vericut se integra com os principais sistemas CAD/CAM como CATIA, MasterCAM, Siemens NX e Hypermill.</li>
+      </ul>
+
+      <img src=\"/blog/vericut-colisao.jpg\" alt=\"Detecção de colisão no Vericut\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
+
+      <h2>Detecção de Colisões: Segurança em Primeiro Lugar</h2>
+      <p>Uma das funcionalidades mais importantes do Vericut é a <strong>detecção automática de colisões</strong>. O software analisa cada linha do programa CNC e verifica se há risco de contato indesejado entre a ferramenta, o porta-ferramentas, a peça, as fixações e os componentes da máquina.</p>
+      <p>Quando uma colisão é detectada, o Vericut alerta imediatamente o programador, que pode corrigir o problema antes de enviar o programa para a máquina. Isso evita danos que podem custar dezenas ou centenas de milhares de reais em reparos.</p>
+
+      <img src=\"/blog/vericut-robo.jpg\" alt=\"Simulação de robô no Vericut\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
+
+      <h2>Além da Usinagem Convencional</h2>
+      <p>O Vericut não se limita apenas a máquinas CNC tradicionais. Ele também simula processos com <strong>robôs industriais</strong>, manufatura aditiva e processos compostos, tornando-se uma solução completa para a indústria moderna.</p>
+
+      <h2>Fanaxis e Vericut: Uma Parceria para o Futuro da Usinagem</h2>
+      <p>A Fanaxis está firmando uma parceria estratégica com a Vericut. Essa união visa trazer o que há de mais moderno em verificação e simulação CNC para o mercado brasileiro, garantindo que nossos clientes tenham acesso à tecnologia que fará a diferença em seus processos produtivos.</p>
+      <p>Com o Vericut, a Fanaxis reforça seu compromisso em fornecer ferramentas que não apenas otimizam a produção, mas também garantem a segurança, a precisão e a rentabilidade de seus clientes.</p>
+
+      <h2>Conclusão: Invista na Segurança e Eficiência</h2>
+      <p>Em um mercado cada vez mais competitivo, a capacidade de produzir peças de alta qualidade com rapidez e sem erros é um diferencial crucial. Um software CAV como o Vericut é um investimento que se paga rapidamente, protegendo seus equipamentos, otimizando seus processos e garantindo a excelência da sua produção.</p>
+      <p><strong>Entre em contato com a Fanaxis hoje mesmo</strong> e descubra como a parceria com a Vericut pode transformar a sua usinagem CNC.</p>
+    `,
+  },
+  {
     slug: "importancia-digitalizacao-processos-usinagem",
     title: "A Importância da Digitalização de Processos na Usinagem CNC",
     excerpt:
