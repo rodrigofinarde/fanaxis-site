@@ -1,10 +1,20 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 
+// Extrair categorias únicas dos posts
+const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
+
 const Blog = () => {
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const filteredPosts = activeCategory
+    ? blogPosts.filter((post) => post.category === activeCategory)
+    : blogPosts;
+
   return (
     <>
       <Helmet>
@@ -46,13 +56,40 @@ const Blog = () => {
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
           Blog <span className="text-[#FF6A00]">Fanaxis</span>
         </h1>
-        <p className="text-lg text-gray-300 mb-12 max-w-3xl">
+        <p className="text-lg text-gray-300 mb-8 max-w-3xl">
           Artigos sobre usinagem CNC, digitalização de processos, gêmeos
           digitais e otimização de manufatura.
         </p>
 
+        {/* Filtros por categoria */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          <button
+            onClick={() => setActiveCategory(null)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              activeCategory === null
+                ? "bg-[#FF6A00] text-white"
+                : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10"
+            }`}
+          >
+            Todos
+          </button>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                activeCategory === cat
+                  ? "bg-[#FF6A00] text-white"
+                  : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {filteredPosts.map((post) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
@@ -85,6 +122,12 @@ const Blog = () => {
             </Link>
           ))}
         </div>
+
+        {filteredPosts.length === 0 && (
+          <p className="text-gray-500 text-center py-12">
+            Nenhum artigo encontrado nesta categoria.
+          </p>
+        )}
       </section>
       <Footer />
     </div>
