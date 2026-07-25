@@ -7,6 +7,35 @@ const Programacao5Eixos = () => {
       <Helmet>
         <title>Programação CNC 5 Eixos | Fanaxis - Soluções Avançadas em Usinagem</title>
         <meta name="description" content="Especialistas em programação CNC 5 eixos para peças complexas. Redução de tempo de ciclo e aumento de produtividade na usinagem." />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Programação CNC 5 Eixos | Fanaxis - Soluções Avançadas em Usinagem" />
+        <meta property="og:description" content="Especialistas em programação CNC 5 eixos para peças complexas. Redução de tempo de ciclo e aumento de produtividade na usinagem." />
+        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:url" content="https://www.fanaxis.com.br/programacao-cnc-5-eixos" />
+        <meta property="og:type" content="website" />
+
+        {/* Schema Markup - WebPage */}
+        <script type="application/ld+json">{`{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Programação CNC 5 Eixos | Fanaxis",
+          "description": "Especialistas em programação CNC 5 eixos para peças complexas. Redução de tempo de ciclo e aumento de produtividade na usinagem.",
+          "url": "https://www.fanaxis.com.br/programacao-cnc-5-eixos",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Fanaxis",
+            "url": "https://www.fanaxis.com.br"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fanaxis",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.fanaxis.com.br/logo-icon.png"
+            }
+          }
+        }`}</script>
       </Helmet>
       <div className="bg-[#0f172a] text-white min-h-screen">
       <Header />

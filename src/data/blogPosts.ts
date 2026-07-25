@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Para empresas que buscam se manter competitivas na era da Indústria 4.0, compreender e adotar a <strong>IA na usinagem</strong> não é mais uma opção, mas uma necessidade estratégica. Neste artigo completo, vamos explorar como os agentes de IA estão sendo integrados aos softwares CAD/CAM, o impacto do machine learning na manufatura, os benefícios da manutenção preditiva e como os gêmeos digitais estão moldando o futuro da usinagem CNC inteligente.</p>
 
-      <img src=\"/blog/maquina-cnc-ia.jpg\" alt=\"Máquina CNC moderna com inteligência artificial\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
+      <img src=\"/blog/maquina-cnc-ia.webp\" alt=\"Máquina CNC moderna com inteligência artificial\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
       <p style=\"text-align: center; font-style: italic; color: #999;\">A integração da inteligência artificial em máquinas CNC modernas permite ajustes em tempo real e precisão submicrométrica.</p>
 
       <h2>O Que é a Inteligência Artificial na Usinagem CNC?</h2>
@@ -138,7 +138,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Agentes IA em Softwares CAD/CAM: O Caso do Siemens NX</h2>
       <p>Um dos avanços mais significativos na programação CNC é a introdução de <strong>agentes IA CAD CAM</strong>. Softwares líderes de mercado, como o Siemens NX, estão na vanguarda dessa revolução, integrando assistentes virtuais e algoritmos de aprendizado de máquina diretamente no ambiente de programação. O <strong>NX inteligência artificial</strong> atua como um verdadeiro copiloto para o programador, sugerindo estratégias de usinagem otimizadas com base no reconhecimento de características geométricas da peça.</p>
 
-      <img src=\"/blog/nx-cam-assist-ia.png\" alt=\"Interface do Siemens NX CAM com IA\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
+      <img src=\"/blog/nx-cam-assist-ia.webp\" alt=\"Interface do Siemens NX CAM com IA\" style=\"width: 100%; margin: 2rem 0; border-radius: 8px;\" />
       <p style=\"text-align: center; font-style: italic; color: #999;\">A interface do Siemens NX CAM utiliza IA para sugerir operações, ferramentas e parâmetros de corte ideais.</p>
 
       <h3>Como a IA Transforma a Programação CAM</h3>
@@ -309,7 +309,7 @@ export const blogPosts: BlogPost[] = [
     category: "Gêmeo Digital",
     date: "05 Mai 2026",
     readTime: 4,
-    coverImage: "/blog/gemeo-digital-cover.png",
+    coverImage: "/blog/gemeo-digital-cover.webp",
     content: `
       <p>Você já imaginou poder testar toda uma operação de usinagem no computador antes de ligar a máquina? É exatamente isso que um <strong>gêmeo digital</strong> permite fazer.</p>
 
@@ -357,7 +357,7 @@ export const blogPosts: BlogPost[] = [
     category: "Otimização",
     date: "02 Mai 2026",
     readTime: 4,
-    coverImage: "/blog/setup-cnc-cover.png",
+    coverImage: "/blog/setup-cnc-cover.webp",
     content: `
       <p>O tempo de setup é um dos maiores vilões da produtividade na usinagem CNC. Cada minuto que a máquina está parada para troca de peça, ferramenta ou programa é um minuto que ela não está produzindo. Veja como <strong>reduzir drasticamente esse tempo</strong>.</p>
 

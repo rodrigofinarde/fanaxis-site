@@ -33,11 +33,47 @@ const BlogPost = () => {
     );
   }
 
+  const fullCoverImageUrl = `https://www.fanaxis.com.br${post.coverImage}`;
+  const canonicalUrl = `https://www.fanaxis.com.br/blog/${post.slug}`;
+
+  // Schema Markup for BlogPosting
+  const blogPostingSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Organization",
+      "name": "Fanaxis"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fanaxis",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.fanaxis.com.br/logo-icon.png"
+      }
+    },
+    "image": fullCoverImageUrl,
+    "mainEntityOfPage": canonicalUrl
+  });
+
   return (
     <>
       <Helmet>
         <title>{post.title} | Fanaxis</title>
         <meta name="description" content={post.excerpt} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={`${post.title} | Fanaxis`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={fullCoverImageUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+
+        {/* Schema Markup - BlogPosting */}
+        <script type="application/ld+json">{blogPostingSchema}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

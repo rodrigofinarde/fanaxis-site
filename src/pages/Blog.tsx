@@ -10,6 +10,35 @@ const Blog = () => {
       <Helmet>
         <title>Blog | Fanaxis - Artigos sobre Usinagem CNC e Tecnologia CAM</title>
         <meta name="description" content="Artigos técnicos sobre usinagem CNC, programação CAM, gêmeos digitais e Indústria 4.0. Conteúdo especializado pela Fanaxis." />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Blog | Fanaxis - Artigos sobre Usinagem CNC e Tecnologia CAM" />
+        <meta property="og:description" content="Artigos técnicos sobre usinagem CNC, programação CAM, gêmeos digitais e Indústria 4.0. Conteúdo especializado pela Fanaxis." />
+        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:url" content="https://www.fanaxis.com.br/blog" />
+        <meta property="og:type" content="website" />
+
+        {/* Schema Markup - WebPage */}
+        <script type="application/ld+json">{`{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Blog Fanaxis",
+          "description": "Artigos técnicos sobre usinagem CNC, programação CAM, gêmeos digitais e Indústria 4.0.",
+          "url": "https://www.fanaxis.com.br/blog",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Fanaxis",
+            "url": "https://www.fanaxis.com.br"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fanaxis",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.fanaxis.com.br/logo-icon.png"
+            }
+          }
+        }`}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
