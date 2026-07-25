@@ -1,4 +1,4 @@
-import heroBg from "@/assets/hero-bg.png";
+import heroBg from "@/assets/hero-bg.webp";
 import { ArrowDown, FileText } from "lucide-react";
 
 const HeroSection = () => {

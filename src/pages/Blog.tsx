@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -5,7 +6,12 @@ import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Blog | Fanaxis - Artigos sobre Usinagem CNC e Tecnologia CAM</title>
+        <meta name="description" content="Artigos técnicos sobre usinagem CNC, programação CAM, gêmeos digitais e Indústria 4.0. Conteúdo especializado pela Fanaxis." />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <section className="container pt-32 pb-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -53,6 +59,7 @@ const Blog = () => {
       </section>
       <Footer />
     </div>
+    </>
   );
 };
 

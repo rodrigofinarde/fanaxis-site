@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,26 +10,36 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <section className="container pt-32 pb-20 text-center">
-          <h1 className="text-3xl font-bold text-white mb-4">
-            Artigo não encontrado
-          </h1>
-          <Link
-            to="/blog"
-            className="text-[#FF6A00] hover:underline"
-          >
-            ← Voltar ao Blog
-          </Link>
-        </section>
-        <Footer />
-      </div>
+      <>
+        <Helmet>
+          <title>Artigo não encontrado | Fanaxis</title>
+        </Helmet>
+        <div className="min-h-screen bg-background">
+          <Header />
+          <section className="container pt-32 pb-20 text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">
+              Artigo não encontrado
+            </h1>
+            <Link
+              to="/blog"
+              className="text-[#FF6A00] hover:underline"
+            >
+              ← Voltar ao Blog
+            </Link>
+          </section>
+          <Footer />
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>{post.title} | Fanaxis</title>
+        <meta name="description" content={post.excerpt} />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <article className="container pt-32 pb-20 max-w-4xl mx-auto">
         {/* Breadcrumb */}
@@ -96,6 +107,7 @@ const BlogPost = () => {
       </article>
       <Footer />
     </div>
+    </>
   );
 };
 

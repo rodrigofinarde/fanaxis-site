@@ -1,8 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 
 const Programacao5Eixos = () => {
   return (
-    <div className="bg-[#0f172a] text-white min-h-screen">
+    <>
+      <Helmet>
+        <title>Programação CNC 5 Eixos | Fanaxis - Soluções Avançadas em Usinagem</title>
+        <meta name="description" content="Especialistas em programação CNC 5 eixos para peças complexas. Redução de tempo de ciclo e aumento de produtividade na usinagem." />
+      </Helmet>
+      <div className="bg-[#0f172a] text-white min-h-screen">
       <Header />
 
       <section className="container pt-32 pb-20">
@@ -37,6 +43,7 @@ const Programacao5Eixos = () => {
         </a>
       </section>
     </div>
+    </>
   );
 };
 
