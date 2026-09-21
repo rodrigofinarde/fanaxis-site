@@ -70,14 +70,7 @@ export const blogPosts: BlogPost[] = [
 <h3>Quer transformar seu pós-processamento em um processo mais confiável?</h3>
 <p>A Fanaxis pode avaliar sua combinação de máquina e comando, identificar os pontos críticos da saída atual e desenvolver uma solução alinhada à sua operação.</p>
 <p><a href="https://wa.me/5511924489409" target="_blank" rel="noopener noreferrer">Fale com a Fanaxis</a></p>
-<h2>Referências técnicas</h2>
-<p>[1] <a href="https://www.siemens.com/en-us/products/nx-manufacturing/cam-software/postprocessing-simulation/" target="_blank" rel="noopener noreferrer">Siemens — Postprocessing and machining simulation</a></p>
-<p>[2] <a href="https://blogs.sw.siemens.com/nx-manufacturing/top-5-advanced-cam-software-capabilities/" target="_blank" rel="noopener noreferrer">Siemens — Top 5 advanced CAM software capabilities every CNC programmer should know</a></p>
-<p>[3] <a href="https://blogs.sw.siemens.com/nx-manufacturing/post-hub-a-cloud-based-postprocessor-solution-for-nx-cam-software/" target="_blank" rel="noopener noreferrer">Siemens — Post Hub: A cloud-based postprocessor solution for NX CAM software</a></p>
-<p>[4] <a href="https://blogs.sw.siemens.com/nx-manufacturing/theme-of-the-month-machine-tool-simulation/" target="_blank" rel="noopener noreferrer">Siemens — Theme of the Month: Machine Tool Simulation</a></p>
-<p>[5] <a href="https://blogs.sw.siemens.com/nx-manufacturing/smart-machine-kit-solutions-hits-milestone-of-100-kits-on-siemens-post-hub/" target="_blank" rel="noopener noreferrer">Siemens — Smart Machine Kit Solutions hits milestone of 100 kits on Post Hub</a></p>
-<h2>Créditos das imagens</h2>
-<p>As imagens desta prévia foram selecionadas em páginas públicas da Siemens Digital Industries Software. A imagem de abertura vem da página de pós-processamento e simulação do NX CAM.[1] A captura de simulação do código NC vem do artigo da Siemens sobre validação de máquinas e processos.[4] A captura do Post Hub vem do artigo da Siemens sobre Smart Machine Kit Solutions.[5]</p>`,
+`,
   },  {
     slug: "machine-kits-nx-cam-gemeo-digital",
     title: "Machine Kits no NX CAM: O Poder do Gêmeo Digital para Programação CNC Avançada",
