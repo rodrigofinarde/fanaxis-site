@@ -62,11 +62,11 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Fanaxis</title>
+        <title>{post.seoTitle ?? post.title} | Fanaxis</title>
         <meta name="description" content={post.excerpt} />
 
         {/* Open Graph */}
-        <meta property="og:title" content={`${post.title} | Fanaxis`} />
+        <meta property="og:title" content={`${post.seoTitle ?? post.title} | Fanaxis`} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={fullCoverImageUrl} />
         <meta property="og:url" content={canonicalUrl} />

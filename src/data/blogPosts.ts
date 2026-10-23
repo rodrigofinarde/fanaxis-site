@@ -1,6 +1,9 @@
+import { cycle800Post } from "./cycle800Post";
+
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   category: string;
   date: string;
@@ -10,6 +13,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  cycle800Post,
   {
     slug: "pos-processador-customizado-nx-cam",
     title: "A Importância de um Pós-Processador Customizado no NX CAM",
