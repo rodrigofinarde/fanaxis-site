@@ -9,7 +9,7 @@ const projects = [
   {
     image: rotorCover,
     video: "/assets/case-rotor-fanaxis.mp4",
-    title: "Um ciclo menor para este rotor.",
+    title: "Rotor macho | material 1045",
     badges: ["Reprogramação e otimização"],
     metric: "Tempo de ciclo: 7h → 3h",
     description: "Após a reprogramação e otimização da Fanaxis, o tempo de ciclo caiu de 7 horas para 3 horas.",
