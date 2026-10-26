@@ -1,17 +1,18 @@
-import project1 from "@/assets/project-1.jpg";
+import { useState } from "react";
+import { Play } from "lucide-react";
+import rotorCover from "@/assets/rotor-case.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const projects = [
   {
-    image: project1,
-    title: "Flange Aeronáutica – Alumínio 7075",
-    badges: ["Fresamento 5 eixos", "Desbaste HPC"],
-    metric: "Tempo de ciclo: 12min → 9min45s",
-    metricDelta: "-18%",
-    description: "Otimização de percurso trocoidal com redução de 18% no tempo de ciclo. Estratégia de desbaste HPC com fresa de metal duro Ø12mm.",
-    software: "Mastercam",
+    image: rotorCover,
+    video: "/assets/case-rotor-fanaxis.mp4",
+    title: "Um ciclo menor para este rotor.",
+    badges: ["Reprogramação e otimização"],
+    metric: "Tempo de ciclo: 7h → 3h",
+    description: "Após a reprogramação e otimização da Fanaxis, o tempo de ciclo caiu de 7 horas para 3 horas.",
   },
   {
     image: project2,
@@ -43,6 +44,8 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const [rotorVideoOpened, setRotorVideoOpened] = useState(false);
+
   return (
     <section id="projetos" className="py-24 bg-background">
       <div className="container">
@@ -63,12 +66,49 @@ const ProjectsSection = () => {
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-cover image-technical transition-transform duration-300 group-hover:scale-[1.02]"
-                  loading="lazy"
-                />
+                {p.video ? (
+                  rotorVideoOpened ? (
+                    <video
+                      src={p.video}
+                      poster={p.image}
+                      controls
+                      autoPlay
+                      playsInline
+                      preload="none"
+                      aria-label="Vídeo do case do rotor Fanaxis"
+                      className="w-full h-full object-contain bg-black"
+                    />
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setRotorVideoOpened(true)}
+                      aria-label="Reproduzir vídeo do case do rotor Fanaxis"
+                      className="relative block w-full h-full overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-primary"
+                    >
+                      <img
+                        src={p.image}
+                        alt="Rotor do case de reprogramação e otimização da Fanaxis"
+                        width={1180}
+                        height={1180}
+                        loading="lazy"
+                        className="w-full h-full object-cover image-technical transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                      <span className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/70 via-transparent to-transparent pb-5">
+                        <span className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg">
+                          <Play className="h-4 w-4" fill="currentColor" aria-hidden="true" />
+                          Assistir ao case
+                        </span>
+                      </span>
+                    </button>
+                  )
+                ) : (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover image-technical transition-transform duration-300 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                )}
               </div>
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
@@ -83,9 +123,11 @@ const ProjectsSection = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {p.description}
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground font-mono">{p.software}</span>
-                </div>
+                {p.software && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-muted-foreground font-mono">{p.software}</span>
+                  </div>
+                )}
               </div>
             </article>
           ))}
