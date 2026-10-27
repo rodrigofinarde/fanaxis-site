@@ -12,23 +12,38 @@ const Header = () => {
   const location = useLocation();
 
   const isHomePage = location.pathname === "/";
+  const logoImages = (
+    <>
+      <img
+        src={logoIcon}
+        alt="Fanaxis Icon"
+        className="h-10 w-auto"
+      />
+      <img
+        src={logoText}
+        alt="Fanaxis"
+        className="h-6 w-auto"
+      />
+    </>
+  );
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1f1f1f] border-b border-[#FF6A00]/40">
       <div className="container flex items-center justify-between h-20">
 
         {/* LOGO */}
-        <Link to="/" className="flex items-center gap-3">
-          <img
-            src={logoIcon}
-            alt="Fanaxis Icon"
-            className="h-10 w-auto"
-          />
-          <img
-            src={logoText}
-            alt="Fanaxis"
-            className="h-6 w-auto"
-          />
+        <Link
+          to="/"
+          className={isHomePage ? "flex flex-col items-start gap-1" : "flex items-center gap-3"}
+        >
+          {isHomePage ? (
+            <>
+              <span className="flex items-center gap-3">{logoImages}</span>
+              <span className="font-mono text-xs tracking-wider text-white/70">
+                Advanced Machining Solutions
+              </span>
+            </>
+          ) : logoImages}
         </Link>
 
         {/* MENU DESKTOP */}

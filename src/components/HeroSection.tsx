@@ -22,19 +22,18 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           
           <p className="font-mono text-sm tracking-widest uppercase text-white/70 mb-6">
-            FANAXIS CAD/CAM • NX • PowerMill • HyperMILL
+            FANAXIS • ENGENHARIA DE MANUFATURA
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white mb-6">
-            Programação CAM de alta performance para redução real de tempo de usinagem.{" "}
+            Engenharia de métodos e processos de{" "}
             <span className="font-mono text-[#FF6A00]">
-              Precisão e eficiência aplicadas diretamente ao seu processo de usinagem.
+              usinagem
             </span>
           </h1>
 
           <p className="text-lg text-white/80 max-w-xl mb-10 leading-relaxed">
-            Programação CAM de alta performance,desenvolvimento,digitalização e análise de processos de usinagem.
-            Redução de custos operacionais através da otimização de percursos de ferramenta e diminuição de setup.
+            Programação CAD/CAM/CNC baseada em gêmeos digitais customizados.
           </p>
 
           <div className="flex flex-wrap gap-4">
