@@ -24,8 +24,8 @@ const projects = [
     imageFit: "object-contain bg-black",
     title: "Ferramenta de estampo | material P20",
     badges: ["Simulação CAM", "Usinagem real"],
-    metric: "Simulação CAD + usinagem real",
-    description: "O vídeo apresenta a simulação CAD no NX CAM e a usinagem real da ferramenta de estampo em material P20.",
+    metric: "Simulação CAM + usinagem real",
+    description: "O vídeo apresenta a simulação CAM no NX CAM e a usinagem real da ferramenta de estampo em material P20.",
     software: "NX CAM",
   },
   {
