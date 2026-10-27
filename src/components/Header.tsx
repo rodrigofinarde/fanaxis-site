@@ -34,16 +34,12 @@ const Header = () => {
         {/* LOGO */}
         <Link
           to="/"
-          className={isHomePage ? "flex flex-col items-start gap-1" : "flex items-center gap-3"}
+          className="flex flex-col items-start gap-1"
         >
-          {isHomePage ? (
-            <>
-              <span className="flex items-center gap-3">{logoImages}</span>
-              <span className="font-mono text-xs tracking-wider text-white/70">
-                Advanced Machining Solutions
-              </span>
-            </>
-          ) : logoImages}
+          <span className="flex items-center gap-3">{logoImages}</span>
+          <span className="font-mono text-xs tracking-wider text-white/70">
+            Advanced Machining Solutions
+          </span>
         </Link>
 
         {/* MENU DESKTOP */}
