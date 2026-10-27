@@ -23,7 +23,7 @@ const projects = [
     imageAlt: "Foto da peça para a ferramenta de estampo em material P20",
     imageFit: "object-contain bg-black",
     title: "Ferramenta de estampo | material P20",
-    badges: ["Simulação CAD", "Usinagem real"],
+    badges: ["Simulação CAM", "Usinagem real"],
     metric: "Simulação CAD + usinagem real",
     description: "O vídeo apresenta a simulação CAD no NX CAM e a usinagem real da ferramenta de estampo em material P20.",
     software: "NX CAM",
