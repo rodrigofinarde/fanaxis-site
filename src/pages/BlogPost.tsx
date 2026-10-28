@@ -101,13 +101,32 @@ const BlogPost = () => {
         </header>
 
         {/* Imagem de capa */}
-        <div className="aspect-video rounded-lg overflow-hidden mb-10">
-          <img
-            src={post.coverImage}
-            alt={post.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <figure className="mb-10">
+          <div className="aspect-video rounded-lg overflow-hidden">
+            <img
+              src={post.coverImage}
+              alt={post.coverImageAlt ?? post.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {post.coverCaption && (
+            <figcaption className="mt-3 border-l-4 border-[#FF6A00] pl-4 text-sm leading-relaxed text-gray-400">
+              {post.coverCaption}{" "}
+              {post.coverImageCreditUrl && (
+                <>
+                  Imagem: <a
+                    href={post.coverImageCreditUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#FF6A00] hover:underline"
+                  >
+                    Siemens — fonte oficial do recurso
+                  </a>.
+                </>
+              )}
+            </figcaption>
+          )}
+        </figure>
 
         {/* Conteúdo do artigo */}
         <div

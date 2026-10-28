@@ -1,4 +1,5 @@
 import { cycle800Post } from "./cycle800Post";
+import { renishawProbingPost } from "./renishawProbingPost";
 
 export interface BlogPost {
   slug: string;
@@ -9,10 +10,14 @@ export interface BlogPost {
   date: string;
   readTime: number;
   coverImage: string;
+  coverImageAlt?: string;
+  coverCaption?: string;
+  coverImageCreditUrl?: string;
   content: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  renishawProbingPost,
   cycle800Post,
   {
     slug: "pos-processador-customizado-nx-cam",
