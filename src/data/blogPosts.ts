@@ -1,5 +1,6 @@
 import { cycle800Post } from "./cycle800Post";
 import { renishawProbingPost } from "./renishawProbingPost";
+import { sinumerikOnePost } from "./sinumerikOnePost";
 
 export interface BlogPost {
   slug: string;
@@ -17,6 +18,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  sinumerikOnePost,
   renishawProbingPost,
   cycle800Post,
   {
