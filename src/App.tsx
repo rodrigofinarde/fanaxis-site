@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Sobre from "./pages/Sobre";
 import FAQ from "./pages/FAQ";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
           {/* SEMPRE DEIXAR O NOTFOUND POR ÚLTIMO */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
