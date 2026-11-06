@@ -90,6 +90,56 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+        <nav aria-label="Redes sociais" className="mt-6 flex justify-center gap-3">
+          <a
+            href="https://www.instagram.com/fanaxis.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram da Fanaxis"
+            title="Instagram"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-8 w-8">
+              <defs>
+                <linearGradient id="instagram-logo-gradient" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#FFDC80" />
+                  <stop offset="45%" stopColor="#F77737" />
+                  <stop offset="72%" stopColor="#E1306C" />
+                  <stop offset="100%" stopColor="#833AB4" />
+                </linearGradient>
+              </defs>
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="url(#instagram-logo-gradient)" strokeWidth="2.2" />
+              <circle cx="12" cy="12" r="4.1" fill="none" stroke="url(#instagram-logo-gradient)" strokeWidth="2.2" />
+              <circle cx="17.45" cy="6.7" r="1.25" fill="#F77737" />
+            </svg>
+          </a>
+          <a
+            href="https://youtube.com/@fanaxis-s4i?si=y2ff3U_le5ZMa30d"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube da Fanaxis"
+            title="YouTube"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 32 32" className="h-9 w-9">
+              <rect x="3" y="7" width="26" height="18" rx="5.3" fill="#FF0033" />
+              <path d="M13 11.5v9l8-4.5-8-4.5Z" fill="#FFFFFF" />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/fanaxis/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn da Fanaxis"
+            title="LinkedIn"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 32 32" className="h-9 w-9">
+              <rect x="2" y="2" width="28" height="28" rx="3" fill="#0A66C2" />
+              <text x="16" y="23" textAnchor="middle" fill="#FFFFFF" fontFamily="Arial, Helvetica, sans-serif" fontSize="18" fontWeight="700" letterSpacing="-1.3">in</text>
+            </svg>
+          </a>
+        </nav>
       </div>
     </footer>
   );

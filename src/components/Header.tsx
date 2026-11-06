@@ -37,7 +37,7 @@ const Header = () => {
           className="flex flex-col items-start gap-1"
         >
           <span className="flex items-center gap-3">{logoImages}</span>
-          <span className="font-mono text-xs tracking-wider text-white/70">
+          <span className="self-stretch text-center font-sans text-xs tracking-normal text-white/70">
             Advanced Machining Solutions
           </span>
         </Link>
