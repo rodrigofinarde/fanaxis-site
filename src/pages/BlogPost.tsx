@@ -22,7 +22,7 @@ const BlogPost = () => {
             </h1>
             <Link
               to="/blog"
-              className="text-[#FF6A00] hover:underline"
+              className="text-[#FE731A] hover:underline"
             >
               ← Voltar ao Blog
             </Link>
@@ -52,7 +52,7 @@ const BlogPost = () => {
       "name": "Fanaxis",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.fanaxis.com.br/logo-icon.png"
+        "url": "https://www.fanaxis.com.br/og-fanaxis.jpg"
       }
     },
     "image": fullCoverImageUrl,
@@ -63,6 +63,7 @@ const BlogPost = () => {
     <>
       <Helmet>
         <title>{post.seoTitle ?? post.title} | Fanaxis</title>
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="description" content={post.excerpt} />
 
         {/* Open Graph */}
@@ -81,14 +82,14 @@ const BlogPost = () => {
       <article className="container pt-32 pb-20 max-w-4xl mx-auto">
         {/* Breadcrumb */}
         <nav className="mb-8">
-          <Link to="/blog" className="text-sm text-[#FF6A00] hover:underline">
+          <Link to="/blog" className="text-sm text-[#FE731A] hover:underline">
             ← Voltar ao Blog
           </Link>
         </nav>
 
         {/* Header do artigo */}
         <header className="mb-10">
-          <span className="text-xs font-mono text-[#FF6A00] uppercase tracking-wider">
+          <span className="text-xs font-mono text-[#FE731A] uppercase tracking-wider">
             {post.category}
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-3 mb-4">
@@ -112,7 +113,7 @@ const BlogPost = () => {
             />
           </div>
           {post.coverCaption && (
-            <figcaption className="mt-3 border-l-4 border-[#FF6A00] pl-4 text-sm leading-relaxed text-gray-400">
+            <figcaption className="mt-3 border-l-4 border-[#FE731A] pl-4 text-sm leading-relaxed text-gray-400">
               {post.coverCaption}{" "}
               {post.coverImageCreditUrl && (
                 <>
@@ -120,7 +121,7 @@ const BlogPost = () => {
                     href={post.coverImageCreditUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#FF6A00] hover:underline"
+                    className="text-[#FE731A] hover:underline"
                   >
                     Siemens — fonte oficial do recurso
                   </a>.
@@ -135,17 +136,17 @@ const BlogPost = () => {
         <div
           className="prose prose-invert prose-lg max-w-none
             prose-headings:text-white prose-headings:font-bold
-            prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-l-4 prose-h2:border-[#FF6A00] prose-h2:pl-4
+            prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-l-4 prose-h2:border-[#FE731A] prose-h2:pl-4
             prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
             prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
             prose-li:text-gray-300
-            prose-strong:text-[#FF6A00]
-            prose-a:text-[#FF6A00] prose-a:hover:underline"
+            prose-strong:text-[#FE731A]
+            prose-a:text-[#FE731A] prose-a:hover:underline"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* CTA */}
-        <div className="mt-16 p-8 bg-secondary/50 border border-[#FF6A00]/30 rounded-lg text-center">
+        <div className="mt-16 p-8 bg-secondary/50 border border-[#FE731A]/30 rounded-lg text-center">
           <h3 className="text-2xl font-bold text-white mb-3">
             Quer otimizar seus processos de usinagem?
           </h3>
@@ -157,7 +158,7 @@ const BlogPost = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#FF6A00] hover:bg-[#e55f00] transition px-8 py-3 rounded font-medium text-white"
+            className="inline-block bg-[#FE731A] hover:bg-[#e55f00] transition px-8 py-3 rounded font-medium text-white"
           >
             Fale com a Fanaxis
           </a>

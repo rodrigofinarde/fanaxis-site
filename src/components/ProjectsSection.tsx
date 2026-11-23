@@ -2,9 +2,6 @@ import { useState } from "react";
 import { Play } from "lucide-react";
 import rotorCover from "@/assets/rotor-case.jpg";
 import stampCover from "@/assets/estampo-p20-cover.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
 
 const projects = [
   {
@@ -12,7 +9,7 @@ const projects = [
     video: "/assets/case-rotor-fanaxis.mp4",
     title: "Rotor macho | material 1045",
     badges: ["Reprogramação e otimização"],
-    metric: "Tempo de ciclo: 7h → 3h",
+    metric: "Tempo de ciclo: 7h → 3h (−57%)",
     description: "Após a reprogramação e otimização da Fanaxis, o tempo de ciclo caiu de 7 horas para 3 horas.",
   },
   {
@@ -23,28 +20,10 @@ const projects = [
     imageAlt: "Foto da peça para a ferramenta de estampo em material P20",
     imageFit: "object-contain bg-black",
     title: "Ferramenta de estampo | material P20",
-    badges: ["Simulação CAM", "Usinagem real"],
-    metric: "Simulação CAM + usinagem real",
-    description: "O vídeo apresenta a simulação CAM no NX CAM e a usinagem real da ferramenta de estampo em material P20.",
+    badges: ["Reprogramação", "Simulação CAM", "Usinagem real"],
+    metric: "Tempo de ciclo: 4h → 2,5h (−37,5%)",
+    description: "Reprogramação no NX CAM com o tempo de ciclo caindo de 4 horas para 2,5 horas. O vídeo mostra a simulação CAM e a usinagem real da ferramenta de estampo em material P20.",
     software: "NX CAM",
-  },
-  {
-    image: project3,
-    title: "Eixo de Transmissão – SAE 4140",
-    badges: ["Torno CNC", "Ciclo Fixo"],
-    metric: "Acabamento: Ra 0.8µm",
-    metricDelta: "Ra 0.8",
-    description: "Programação de torneamento com ciclos fixos otimizados. Rosca M24x2 com entrada e saída controlada. Tolerância h6 no diâmetro principal.",
-    software: "Siemens NX",
-  },
-  {
-    image: project4,
-    title: "Cavidade de Molde de Injeção",
-    badges: ["HSM", "Eletroerosão", "Acabamento"],
-    metric: "Vida da ferramenta: +40%",
-    metricDelta: "+40%",
-    description: "Estratégia HSM com passo constante para acabamento de superfícies complexas. Redução de 40% no desgaste de ferramenta com parâmetros otimizados.",
-    software: "Mastercam",
   },
 ];
 

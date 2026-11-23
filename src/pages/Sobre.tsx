@@ -9,12 +9,13 @@ const Sobre = () => {
     <>
       <Helmet>
         <title>Sobre a Fanaxis | Programação CAD/CAM/CNC e Consultoria em Usinagem</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/sobre" />
         <meta name="description" content="Conheça a Fanaxis: empresa especializada em programação CAD/CAM/CNC, digitalização de processos e consultoria em usinagem CNC. Fundada por Rodrigo Finarde com 20+ anos de experiência." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Sobre a Fanaxis | Advanced Machining Solutions" />
         <meta property="og:description" content="Conheça a Fanaxis: empresa especializada em programação CAD/CAM/CNC, digitalização de processos e consultoria em usinagem CNC." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/sobre" />
         <meta property="og:type" content="website" />
 
@@ -34,7 +35,7 @@ const Sobre = () => {
             "@type": "Organization",
             "name": "Fanaxis",
             "url": "https://www.fanaxis.com.br",
-            "logo": "https://www.fanaxis.com.br/logo-icon.png"
+            "logo": "https://www.fanaxis.com.br/og-fanaxis.jpg"
           }
         }`}</script>
       </Helmet>
@@ -43,11 +44,11 @@ const Sobre = () => {
 
         {/* Hero */}
         <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FF6A00] mb-4">
+          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
             Quem somos
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Sobre a <span className="text-[#FF6A00]">Fanaxis</span>
+            Sobre a <span className="text-[#FE731A]">Fanaxis</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
             A Fanaxis é uma empresa brasileira especializada em soluções avançadas de usinagem CNC,
@@ -90,7 +91,7 @@ const Sobre = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Rodrigo Finarde
                 </h3>
-                <p className="text-[#FF6A00] text-sm mb-4">
+                <p className="text-[#FE731A] text-sm mb-4">
                   Fundador & Especialista CAD/CAM/CNC
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-3">
@@ -106,7 +107,7 @@ const Sobre = () => {
                   href="https://linkedin.com/in/rodrigo-finarde-6641506b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#FF6A00] hover:underline"
+                  className="text-sm text-[#FE731A] hover:underline"
                 >
                   Ver perfil no LinkedIn →
                 </a>
@@ -117,7 +118,7 @@ const Sobre = () => {
                   O slogan
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-3">
-                  "We <strong className="text-[#FF6A00]">CAM</strong> go further"
+                  "We <strong className="text-[#FE731A]">CAM</strong> go further"
                 </p>
                 <p className="text-sm text-gray-400">
                   Uma referência ao Computer Aided Manufacturing (CAM) e ao compromisso da Fanaxis
@@ -136,7 +137,7 @@ const Sobre = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-background/50 border border-white/10 rounded-lg p-8 text-center">
-                <Target className="w-10 h-10 text-[#FF6A00] mx-auto mb-4" strokeWidth={1.5} />
+                <Target className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Missão</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
                   Democratizar o acesso à tecnologia CAD/CAM/CNC de ponta, levando soluções de
@@ -145,7 +146,7 @@ const Sobre = () => {
               </div>
 
               <div className="bg-background/50 border border-white/10 rounded-lg p-8 text-center">
-                <Eye className="w-10 h-10 text-[#FF6A00] mx-auto mb-4" strokeWidth={1.5} />
+                <Eye className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Visão</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
                   Ser referência nacional em programação CAM e digitalização de processos de
@@ -154,7 +155,7 @@ const Sobre = () => {
               </div>
 
               <div className="bg-background/50 border border-white/10 rounded-lg p-8 text-center">
-                <Heart className="w-10 h-10 text-[#FF6A00] mx-auto mb-4" strokeWidth={1.5} />
+                <Heart className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Valores</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
                   Excelência técnica, inovação contínua, resultado mensurável para o cliente,
@@ -176,7 +177,7 @@ const Sobre = () => {
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Entrar em contato
             <ArrowRight className="w-4 h-4" />

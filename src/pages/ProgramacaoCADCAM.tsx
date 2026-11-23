@@ -9,12 +9,13 @@ const ProgramacaoCADCAM = () => {
     <>
       <Helmet>
         <title>Programação CAD/CAM/CNC | Fanaxis - Usinagem de Alta Performance</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/servicos/programacao-cam" />
         <meta name="description" content="Programação CAD/CAM/CNC profissional para fresamento 3, 4 e 5 eixos simultâneos. NX CAM, PowerMill e HyperMILL. Redução de tempo de ciclo e otimização de processos. Fale com a Fanaxis." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Programação CAD/CAM/CNC | Fanaxis" />
         <meta property="og:description" content="Programação CAD/CAM/CNC profissional para fresamento 3, 4 e 5 eixos simultâneos. NX CAM, PowerMill e HyperMILL." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/servicos/programacao-cam" />
         <meta property="og:type" content="website" />
 
@@ -29,7 +30,7 @@ const ProgramacaoCADCAM = () => {
             "@type": "Organization",
             "name": "Fanaxis",
             "url": "https://www.fanaxis.com.br",
-            "logo": "https://www.fanaxis.com.br/logo-icon.png"
+            "logo": "https://www.fanaxis.com.br/og-fanaxis.jpg"
           },
           "areaServed": "BR",
           "hasOfferCatalog": {
@@ -66,11 +67,11 @@ const ProgramacaoCADCAM = () => {
 
         {/* Hero */}
         <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FF6A00] mb-4">
+          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
             Serviços
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Programação <span className="text-[#FF6A00]">CAD/CAM/CNC</span>
+            Programação <span className="text-[#FE731A]">CAD/CAM/CNC</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
             Programação CAM de alta performance para fresamento 3, 4 e 5 eixos simultâneos.
@@ -82,7 +83,7 @@ const ProgramacaoCADCAM = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Solicitar orçamento
             <ArrowRight className="w-4 h-4" />
@@ -115,23 +116,23 @@ const ProgramacaoCADCAM = () => {
               </h2>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Fábricas que buscam reduzir tempo de usinagem e custo por peça</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas de manufatura com máquinas 3, 4 e 5 eixos</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Setores automotivo, aeronáutico, moldes e matrizes</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Produtores de peças sob demanda que precisam de programadores experientes</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que buscam digitalizar e padronizar processos de usinagem</span>
                 </li>
               </ul>
@@ -149,7 +150,7 @@ const ProgramacaoCADCAM = () => {
               {[
                 {
                   title: "Redução de tempo de ciclo",
-                  desc: "Percursos de ferramenta otimizados que reduzem até 20% do tempo de usinagem, gerando economia real na produção.",
+                  desc: "Percursos de ferramenta otimizados para a sua máquina. Nos casos documentados, o ciclo caiu 57% (rotor macho) e 37,5% (estampo P20).",
                 },
                 {
                   title: "Maior vida útil da ferramenta",
@@ -192,7 +193,7 @@ const ProgramacaoCADCAM = () => {
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Falar com especialista
             <ArrowRight className="w-4 h-4" />

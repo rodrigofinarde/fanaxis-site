@@ -1,41 +1,25 @@
-import { ArrowRight, AlertTriangle, CheckCircle } from "lucide-react";
+import { ClipboardList, Box, Cpu, Factory } from "lucide-react";
 
-const comparisons = [
+const steps = [
   {
-    problem: {
-      title: "Gargalo no Setup",
-      items: [
-        "4 fixações por peça",
-        "Retrabalho por erro de referenciamento",
-        "Tempo morto de 25min entre operações",
-      ],
-    },
-    solution: {
-      title: "Setup Otimizado",
-      items: [
-        "2 fixações com dispositivo modular",
-        "Zero-point system com repetibilidade de 5µm",
-        "Tempo morto reduzido para 8min",
-      ],
-    },
+    icon: ClipboardList,
+    title: "Diagnóstico do processo",
+    text: "Levantamos a peça, o programa atual, as ferramentas, a fixação e o tempo de ciclo real. É a linha de base contra a qual o resultado é medido.",
   },
   {
-    problem: {
-      title: "Quebra Frequente de Ferramenta",
-      items: [
-        "Avanço por dente excessivo (fz 0.15mm)",
-        "Sem monitoramento de carga do spindle",
-        "Troca reativa — apenas após quebra",
-      ],
-    },
-    solution: {
-      title: "Gestão de Ferramentas",
-      items: [
-        "Parâmetros calibrados por material (fz 0.08mm)",
-        "Monitoramento de potência em tempo real",
-        "Troca preventiva baseada em vida útil calculada",
-      ],
-    },
+    icon: Box,
+    title: "Máquina virtual",
+    text: "Montamos ou ajustamos o machine kit e o pós-processador da sua máquina, para que o NC simulado seja o mesmo que vai rodar no comando.",
+  },
+  {
+    icon: Cpu,
+    title: "Programação e simulação",
+    text: "Reprogramamos no NX CAM ou no hyperMILL com estratégias 3+2 ou 5 eixos simultâneos, validando colisões, cursos e transições antes de liberar.",
+  },
+  {
+    icon: Factory,
+    title: "Validação na máquina",
+    text: "O novo programa é conferido na máquina e o tempo de ciclo é comparado com a linha de base. No rotor macho: 7h → 3h. No estampo P20: 4h → 2,5h.",
   },
 ];
 
@@ -45,64 +29,30 @@ const MethodsSection = () => {
       <div className="container">
         <div className="mb-16">
           <p className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-3">
-            Análise de Processos
+            Como trabalhamos
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
             Métodos & Otimização
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl">
-            Cada projeto começa com uma análise detalhada do processo atual. 
-            Identificamos gargalos e implementamos soluções mensuráveis.
+            Cada projeto começa medindo o processo atual e termina medindo o novo, na máquina.
           </p>
         </div>
 
-        <div className="space-y-8">
-          {comparisons.map((c, i) => (
-            <div
-              key={i}
-              className="card-technical bg-background rounded-lg overflow-hidden"
-            >
-              <div className="grid md:grid-cols-[1fr_auto_1fr]">
-                {/* Problem */}
-                <div className="p-8">
-                  <div className="flex items-center gap-2 mb-4">
-                    <AlertTriangle className="w-4 h-4 text-accent" />
-                    <h3 className="font-semibold text-foreground">{c.problem.title}</h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {c.problem.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                        <span className="font-mono">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Arrow */}
-                <div className="flex items-center justify-center p-4">
-                  <ArrowRight className="w-6 h-6 text-primary rotate-90 md:rotate-0" />
-                </div>
-
-                {/* Solution */}
-                <div className="p-8 bg-primary/[0.03]">
-                  <div className="flex items-center gap-2 mb-4">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <h3 className="font-semibold text-foreground">{c.solution.title}</h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {c.solution.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm text-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                        <span className="font-mono">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((s, i) => (
+            <li key={s.title} className="card-technical bg-background rounded-lg p-8 flex flex-col">
+              <div className="flex items-center justify-between mb-6">
+                <s.icon className="w-6 h-6 text-primary" strokeWidth={1.5} aria-hidden="true" />
+                <span className="font-display text-3xl text-white/15 tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
-            </div>
+              <h3 className="font-semibold text-foreground mb-3">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

@@ -6,12 +6,13 @@ const Programacao5Eixos = () => {
     <>
       <Helmet>
         <title>Programação CNC 5 Eixos | Fanaxis - Soluções Avançadas em Usinagem</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/programacao-cnc-5-eixos" />
         <meta name="description" content="Especialistas em programação CNC 5 eixos para peças complexas. Redução de tempo de ciclo e aumento de produtividade na usinagem." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Programação CNC 5 Eixos | Fanaxis - Soluções Avançadas em Usinagem" />
         <meta property="og:description" content="Especialistas em programação CNC 5 eixos para peças complexas. Redução de tempo de ciclo e aumento de produtividade na usinagem." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/programacao-cnc-5-eixos" />
         <meta property="og:type" content="website" />
 
@@ -32,7 +33,7 @@ const Programacao5Eixos = () => {
             "name": "Fanaxis",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.fanaxis.com.br/logo-icon.png"
+              "url": "https://www.fanaxis.com.br/og-fanaxis.jpg"
             }
           }
         }`}</script>

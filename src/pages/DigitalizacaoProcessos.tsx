@@ -9,12 +9,13 @@ const DigitalizacaoProcessos = () => {
     <>
       <Helmet>
         <title>Digitalização de Processos | Fanaxis - Indústria 4.0 e Manufatura Digital</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/servicos/digitalizacao-processos" />
         <meta name="description" content="Digitalização de processos de usinagem CNC:Industry 4.0, manufatura conectada, rastreabilidade de produção e integração de dados. Modernize sua fábrica com a Fanaxis." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Digitalização de Processos | Fanaxis" />
         <meta property="og:description" content="Digitalização de processos de usinagem CNC: Industry 4.0, manufatura conectada, rastreabilidade de produção e integração de dados." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/servicos/digitalizacao-processos" />
         <meta property="og:type" content="website" />
 
@@ -29,7 +30,7 @@ const DigitalizacaoProcessos = () => {
             "@type": "Organization",
             "name": "Fanaxis",
             "url": "https://www.fanaxis.com.br",
-            "logo": "https://www.fanaxis.com.br/logo-icon.png"
+            "logo": "https://www.fanaxis.com.br/og-fanaxis.jpg"
           },
           "areaServed": "BR",
           "hasOfferCatalog": {
@@ -66,11 +67,11 @@ const DigitalizacaoProcessos = () => {
 
         {/* Hero */}
         <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FF6A00] mb-4">
+          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
             Serviços
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Digitalização de <span className="text-[#FF6A00]">Processos</span>
+            Digitalização de <span className="text-[#FE731A]">Processos</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
             Digitalização de processos de usinagem CNC com foco em Indústria 4.0 e manufatura
@@ -82,7 +83,7 @@ const DigitalizacaoProcessos = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Solicitar diagnóstico
             <ArrowRight className="w-4 h-4" />
@@ -115,23 +116,23 @@ const DigitalizacaoProcessos = () => {
               </h2>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Fábricas que ainda dependem de processos manuais e papel no chão de fábrica</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que querem implementar conceitos de Indústria 4.0 de forma prática</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Gerentes industriais que precisam de visibilidade e rastreabilidade da produção</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que querem integrar dados de máquinas CNC com sistemas ERP/MES</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Organizações que buscam certificações de qualidade e precisam documentar processos</span>
                 </li>
               </ul>
@@ -192,7 +193,7 @@ const DigitalizacaoProcessos = () => {
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Solicitar diagnóstico digital
             <ArrowRight className="w-4 h-4" />

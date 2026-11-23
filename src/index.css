@@ -13,7 +13,7 @@ html {
   --background: 220 10% 12%; /* grafite escuro */
   --foreground: 0 0% 100%; /* branco */
 
-  --primary: 25 100% 50%; /* laranja Fanaxis */
+  --primary: 23 99% 55%; /* laranja Fanaxis */
   --primary-foreground: 0 0% 100%;
 
   --secondary: 220 10% 20%;
@@ -22,12 +22,24 @@ html {
   --muted: 220 10% 25%;
   --muted-foreground: 0 0% 70%;
 
-  --accent: 25 100% 50%;
+  --accent: 23 99% 55%;
   --accent-foreground: 0 0% 100%;
 
   --border: 220 10% 25%;
   --input: 220 10% 25%;
-  --ring: 25 100% 50%;
+  --ring: 23 99% 55%;
+}
+
+/* TIPOGRAFIA DA MARCA: Anton (títulos principais), Archivo Black (seções), Arimo (texto) */
+h1 {
+  font-family: "Anton", Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+h2 {
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 /* DARK MODE FIXO */
