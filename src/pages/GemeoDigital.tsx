@@ -9,12 +9,13 @@ const GemeoDigital = () => {
     <>
       <Helmet>
         <title>Gêmeo Digital CNC | Fanaxis - Simulação e Digitalização de Máquinas</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/servicos/gemeo-digital" />
         <meta name="description" content="Gêmeo digital CNC: simulação completa da máquina, detecção de colisões e validação de programas antes da usinagem. NX CAM Machine Kits e simulação virtual. Fale com a Fanaxis." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Gêmeo Digital CNC | Fanaxis" />
         <meta property="og:description" content="Gêmeo digital CNC: simulação completa da máquina, detecção de colisões e validação de programas antes da usinagem." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/servicos/gemeo-digital" />
         <meta property="og:type" content="website" />
 
@@ -29,7 +30,7 @@ const GemeoDigital = () => {
             "@type": "Organization",
             "name": "Fanaxis",
             "url": "https://www.fanaxis.com.br",
-            "logo": "https://www.fanaxis.com.br/logo-icon.png"
+            "logo": "https://www.fanaxis.com.br/og-fanaxis.jpg"
           },
           "areaServed": "BR",
           "hasOfferCatalog": {
@@ -66,11 +67,11 @@ const GemeoDigital = () => {
 
         {/* Hero */}
         <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FF6A00] mb-4">
+          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
             Serviços
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Gêmeo <span className="text-[#FF6A00]">Digital</span> CNC
+            Gêmeo <span className="text-[#FE731A]">Digital</span> CNC
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
             Criação de gêmeos digitais de máquinas CNC para simulação completa, detecção de colisões
@@ -82,7 +83,7 @@ const GemeoDigital = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Solicitar análise técnica
             <ArrowRight className="w-4 h-4" />
@@ -115,23 +116,23 @@ const GemeoDigital = () => {
               </h2>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Fábricas que querem eliminar colisões e danos caros na máquina</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que operam máquinas 5 eixos de alto valor</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Setores aeronáutico, automotivo e moldes que exigem zero erro</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Equipes de programação que buscam validar programas remotamente</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que querem padronizar e digitalizar a produção</span>
                 </li>
               </ul>
@@ -192,7 +193,7 @@ const GemeoDigital = () => {
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Agendar demonstração
             <ArrowRight className="w-4 h-4" />

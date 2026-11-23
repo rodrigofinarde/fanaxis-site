@@ -9,12 +9,13 @@ const ConsultoriaUsinagem = () => {
     <>
       <Helmet>
         <title>Consultoria em Usinagem CNC | Fanaxis - Otimização de Processos de Manufatura</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/servicos/consultoria-usinagem" />
         <meta name="description" content="Consultoria especializada em usinagem CNC: análise de processos, redução de tempo de ciclo, seleção de ferramentas e otimização de parâmetros de corte. 20+ anos de experiência. Fale com a Fanaxis." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Consultoria em Usinagem CNC | Fanaxis" />
         <meta property="og:description" content="Consultoria especializada em usinagem CNC: análise de processos, redução de tempo de ciclo, seleção de ferramentas e otimização de parâmetros de corte." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/servicos/consultoria-usinagem" />
         <meta property="og:type" content="website" />
 
@@ -29,7 +30,7 @@ const ConsultoriaUsinagem = () => {
             "@type": "Organization",
             "name": "Fanaxis",
             "url": "https://www.fanaxis.com.br",
-            "logo": "https://www.fanaxis.com.br/logo-icon.png"
+            "logo": "https://www.fanaxis.com.br/og-fanaxis.jpg"
           },
           "areaServed": "BR",
           "hasOfferCatalog": {
@@ -66,11 +67,11 @@ const ConsultoriaUsinagem = () => {
 
         {/* Hero */}
         <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FF6A00] mb-4">
+          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
             Serviços
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Consultoria em <span className="text-[#FF6A00]">Usinagem CNC</span>
+            Consultoria em <span className="text-[#FE731A]">Usinagem CNC</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
             Consultoria especializada em usinagem CNC com mais de 20 anos de experiência no chão
@@ -82,7 +83,7 @@ const ConsultoriaUsinagem = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Solicitar consultoria
             <ArrowRight className="w-4 h-4" />
@@ -118,23 +119,23 @@ const ConsultoriaUsinagem = () => {
               </h2>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que sentem que seus processos de usinagem estão defasados</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Gerentes de produção que precisam reduzir custos operacionais</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Equipes de programação que querem se atualizar com tecnologias CAM modernas</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas investindo em máquinas 5 eixos e precisando de suporte especializado</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#FF6A00] mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Indústrias que buscam aumentar produtividade sem contratar mais pessoas</span>
                 </li>
               </ul>
@@ -195,7 +196,7 @@ const ConsultoriaUsinagem = () => {
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
           >
             Agendar diagnóstico gratuito
             <ArrowRight className="w-4 h-4" />

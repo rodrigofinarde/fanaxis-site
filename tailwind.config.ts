@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"IBM Plex Sans"', 'sans-serif'],
+        sans: ['Arimo', 'Arial', 'sans-serif'],
+        display: ['Anton', 'Impact', 'sans-serif'],
+        heading: ['"Archivo Black"', 'Arial Black', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {

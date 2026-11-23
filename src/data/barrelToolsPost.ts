@@ -30,7 +30,7 @@ export const barrelToolsPost: BlogPost = {
 <h2>Como programar ferramenta barril no NX CAM</h2>
 <figure style="margin:2rem 0;">
   <img src="/blog/ferramenta-barril-5-eixos/nx-cam-wall-finish-barrel-swarf.jpg" alt="Captura estática da interface NX CAM com uma operação Wall Finish Barrel Swarf." loading="lazy" style="width:100%;height:auto;display:block;border-radius:8px;" />
-  <figcaption style="font-size:0.875rem;line-height:1.6;color:#a6adb7;border-left:3px solid #FF6A00;padding:0.75rem 1rem;margin-top:0.75rem;">Operação Wall Finish Barrel Swarf no NX CAM.</figcaption>
+  <figcaption style="font-size:0.875rem;line-height:1.6;color:#a6adb7;border-left:3px solid #FE731A;padding:0.75rem 1rem;margin-top:0.75rem;">Operação Wall Finish Barrel Swarf no NX CAM.</figcaption>
 </figure>
 <p>O NX CAM oferece ferramentas e operações para trajetórias multieixos com perfis barril. Um estudo experimental descreve o uso do NX CAM 1946 com <strong>Variable Contour</strong> para gerar percursos 5 eixos com controle da posição da ferramenta em relação à superfície. Em versões posteriores, a Siemens documenta <strong>Wall Finish Barrel Swarf</strong> para acabamento de paredes profundas planas ou contornadas. A disponibilidade e os parâmetros dependem da versão e da configuração licenciada.</p>
 <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin:1.5rem 0 2rem;">

@@ -12,7 +12,7 @@ const Footer = () => {
             </p>
             <p className="text-sm text-white/40 leading-relaxed">
               Programação CAD/CAM/CNC, digitalização de processos, gêmeos digitais e
-              consultoria em usinagem CNC. We <strong className="text-[#FF6A00]">CAM</strong> go further.
+              consultoria em usinagem CNC. We <strong className="text-[#FE731A]">CAM</strong> go further.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="Instagram da Fanaxis"
             title="Instagram"
-            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FE731A]"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" className="h-8 w-8">
               <defs>
@@ -119,7 +119,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="YouTube da Fanaxis"
             title="YouTube"
-            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FE731A]"
           >
             <svg aria-hidden="true" viewBox="0 0 32 32" className="h-9 w-9">
               <rect x="3" y="7" width="26" height="18" rx="5.3" fill="#FF0033" />
@@ -132,7 +132,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="LinkedIn da Fanaxis"
             title="LinkedIn"
-            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-md border border-white/20 bg-[#171717] transition hover:border-white/40 hover:bg-[#202020] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FE731A]"
           >
             <svg aria-hidden="true" viewBox="0 0 32 32" className="h-9 w-9">
               <rect x="2" y="2" width="28" height="28" rx="3" fill="#0A66C2" />

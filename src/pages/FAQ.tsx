@@ -58,12 +58,13 @@ const FAQ = () => {
     <>
       <Helmet>
         <title>FAQ | Fanaxis - Perguntas Frequentes sobre Programação CNC e Usinagem</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/faq" />
         <meta name="description" content="Perguntas frequentes sobre programação CAM, gêmeo digital CNC, consultoria em usinagem e digitalização de processos. Tire suas dúvidas com a Fanaxis." />
 
         {/* Open Graph */}
         <meta property="og:title" content="FAQ | Fanaxis - Perguntas Frequentes" />
         <meta property="og:description" content="Perguntas frequentes sobre programação CAM, gêmeo digital CNC, consultoria em usinagem e digitalização de processos." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/faq" />
         <meta property="og:type" content="website" />
 
@@ -90,11 +91,11 @@ const FAQ = () => {
         <Header />
 
         <section className="container pt-32 pb-20">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FF6A00] mb-4">
+          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
             Dúvidas frequentes
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Perguntas <span className="text-[#FF6A00]">Frequentes</span>
+            Perguntas <span className="text-[#FE731A]">Frequentes</span>
           </h1>
           <p className="text-lg text-gray-300 mb-12 max-w-3xl">
             Tire suas dúvidas sobre programação CAM, gêmeos digitais, consultoria
@@ -109,7 +110,7 @@ const FAQ = () => {
                   value={`item-${i}`}
                   className="border-b border-white/10"
                 >
-                  <AccordionTrigger className="text-left text-white hover:text-[#FF6A00] transition-colors py-5">
+                  <AccordionTrigger className="text-left text-white hover:text-[#FE731A] transition-colors py-5">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300 pb-5 leading-relaxed">
@@ -130,7 +131,7 @@ const FAQ = () => {
             </p>
             <Link
               to="/#contato"
-              className="inline-flex items-center gap-2 bg-[#FF6A00] hover:bg-[#e65c00] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
             >
               Falar com especialista
               <ArrowRight className="w-4 h-4" />

@@ -19,12 +19,13 @@ const Blog = () => {
     <>
       <Helmet>
         <title>Blog | Fanaxis - Artigos sobre Usinagem CNC e Tecnologia CAM</title>
+        <link rel="canonical" href="https://www.fanaxis.com.br/blog" />
         <meta name="description" content="Artigos técnicos sobre usinagem CNC, programação CAM, gêmeos digitais e Indústria 4.0. Conteúdo especializado pela Fanaxis." />
 
         {/* Open Graph */}
         <meta property="og:title" content="Blog | Fanaxis - Artigos sobre Usinagem CNC e Tecnologia CAM" />
         <meta property="og:description" content="Artigos técnicos sobre usinagem CNC, programação CAM, gêmeos digitais e Indústria 4.0. Conteúdo especializado pela Fanaxis." />
-        <meta property="og:image" content="https://www.fanaxis.com.br/logo-icon.png" />
+        <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/blog" />
         <meta property="og:type" content="website" />
 
@@ -45,7 +46,7 @@ const Blog = () => {
             "name": "Fanaxis",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.fanaxis.com.br/logo-icon.png"
+              "url": "https://www.fanaxis.com.br/og-fanaxis.jpg"
             }
           }
         }`}</script>
@@ -54,7 +55,7 @@ const Blog = () => {
       <Header />
       <section className="container pt-32 pb-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-          Blog <span className="text-[#FF6A00]">Fanaxis</span>
+          Blog <span className="text-[#FE731A]">Fanaxis</span>
         </h1>
         <p className="text-lg text-gray-300 mb-8 max-w-3xl">
           Artigos sobre usinagem CNC, digitalização de processos, gêmeos
@@ -67,7 +68,7 @@ const Blog = () => {
             onClick={() => setActiveCategory(null)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeCategory === null
-                ? "bg-[#FF6A00] text-white"
+                ? "bg-[#FE731A] text-white"
                 : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10"
             }`}
           >
@@ -79,7 +80,7 @@ const Blog = () => {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 activeCategory === cat
-                  ? "bg-[#FF6A00] text-white"
+                  ? "bg-[#FE731A] text-white"
                   : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10"
               }`}
             >
@@ -93,7 +94,7 @@ const Blog = () => {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="group block bg-secondary/50 border border-border rounded-lg overflow-hidden hover:border-[#FF6A00]/60 transition-all duration-300"
+              className="group block bg-secondary/50 border border-border rounded-lg overflow-hidden hover:border-[#FE731A]/60 transition-all duration-300"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -103,10 +104,10 @@ const Blog = () => {
                 />
               </div>
               <div className="p-6">
-                <span className="text-xs font-mono text-[#FF6A00] uppercase tracking-wider">
+                <span className="text-xs font-mono text-[#FE731A] uppercase tracking-wider">
                   {post.category}
                 </span>
-                <h2 className="text-xl font-semibold text-white mt-2 mb-3 group-hover:text-[#FF6A00] transition-colors">
+                <h2 className="text-xl font-semibold text-white mt-2 mb-3 group-hover:text-[#FE731A] transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-sm text-gray-400 line-clamp-3">
@@ -114,7 +115,7 @@ const Blog = () => {
                 </p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-xs text-gray-500">{post.date}</span>
-                  <span className="text-xs text-[#FF6A00] font-medium group-hover:underline">
+                  <span className="text-xs text-[#FE731A] font-medium group-hover:underline">
                     Ler mais →
                   </span>
                 </div>

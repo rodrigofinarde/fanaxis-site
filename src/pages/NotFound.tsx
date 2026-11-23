@@ -13,6 +13,7 @@ const NotFound = () => {
     <>
       <Helmet>
         <title>Página não encontrada | Fanaxis</title>
+        <meta name="robots" content="noindex" />
       </Helmet>
       <div className="flex min-h-screen items-center justify-center bg-muted">
         <div className="text-center">

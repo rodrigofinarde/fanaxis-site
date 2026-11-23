@@ -28,7 +28,7 @@ const Header = () => {
   );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1f1f1f] border-b border-[#FF6A00]/40">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1f1f1f] border-b border-[#FE731A]/40">
       <div className="container flex items-center justify-between h-20">
 
         {/* LOGO */}
@@ -139,7 +139,7 @@ const Header = () => {
 
           <a
             href={isHomePage ? "/#contato" : "/#contato"}
-            className="text-sm bg-[#FF6A00] hover:bg-[#e65c00] text-white px-4 py-2 rounded-sm transition-all hover:scale-105 font-medium"
+            className="text-sm bg-[#FE731A] hover:bg-[#E5620F] text-white px-4 py-2 rounded-sm transition-all hover:scale-105 font-medium"
           >
             Contato
           </a>
@@ -155,9 +155,9 @@ const Header = () => {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-[#1f1f1f] border-t border-[#FF6A00]/20 py-4">
+        <nav className="md:hidden bg-[#1f1f1f] border-t border-[#FE731A]/20 py-4">
           <div className="container flex flex-col gap-4">
-            <p className="font-mono text-xs text-[#FF6A00] uppercase tracking-wider">Serviços</p>
+            <p className="font-mono text-xs text-[#FE731A] uppercase tracking-wider">Serviços</p>
             <Link
               to="/servicos/programacao-cam"
               onClick={() => setOpen(false)}
@@ -225,7 +225,7 @@ const Header = () => {
             <Link
               to="/#contato"
               onClick={() => setOpen(false)}
-              className="text-sm bg-[#FF6A00] hover:bg-[#e65c00] text-white px-4 py-2 rounded-sm text-center"
+              className="text-sm bg-[#FE731A] hover:bg-[#E5620F] text-white px-4 py-2 rounded-sm text-center"
             >
               Contato
             </Link>
