@@ -66,6 +66,7 @@ const BlogPost = () => {
         <meta name="description" content={post.excerpt} />
 
         {/* Open Graph */}
+        {post.seoKeywords && <meta name="keywords" content={post.seoKeywords} />}
         <meta property="og:title" content={`${post.seoTitle ?? post.title} | Fanaxis`} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={fullCoverImageUrl} />
@@ -101,6 +102,7 @@ const BlogPost = () => {
         </header>
 
         {/* Imagem de capa */}
+        {!post.coverImageInContent && (
         <figure className="mb-10">
           <div className="aspect-video rounded-lg overflow-hidden">
             <img
@@ -127,6 +129,7 @@ const BlogPost = () => {
             </figcaption>
           )}
         </figure>
+        )}
 
         {/* Conteúdo do artigo */}
         <div

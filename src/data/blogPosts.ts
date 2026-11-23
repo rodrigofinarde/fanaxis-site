@@ -2,11 +2,13 @@ import { cycle800Post } from "./cycle800Post";
 import { renishawProbingPost } from "./renishawProbingPost";
 import { sinumerikOnePost } from "./sinumerikOnePost";
 import { barrelToolsPost } from "./barrelToolsPost";
+import { fixationDigitalTwinPost } from "./fixationDigitalTwinPost";
 
 export interface BlogPost {
   slug: string;
   title: string;
   seoTitle?: string;
+  seoKeywords?: string;
   excerpt: string;
   category: string;
   date: string;
@@ -15,10 +17,12 @@ export interface BlogPost {
   coverImageAlt?: string;
   coverCaption?: string;
   coverImageCreditUrl?: string;
+  coverImageInContent?: boolean;
   content: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  fixationDigitalTwinPost,
   barrelToolsPost,
   sinumerikOnePost,
   renishawProbingPost,
