@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import CadCorners from "./CadCorners";
 import { Play } from "lucide-react";
 import rotorCover from "@/assets/rotor-case.jpg";
 import stampCover from "@/assets/estampo-p20-cover.jpg";
@@ -10,7 +11,10 @@ const projects = [
     title: "Rotor macho | material 1045",
     badges: ["Reprogramação e otimização"],
     metric: "Tempo de ciclo: 7h → 3h (−57%)",
-    description: "Após a reprogramação e otimização da Fanaxis, o tempo de ciclo caiu de 7 horas para 3 horas.",
+    before: 7,
+    after: 3,
+    stage: "Simulado no gêmeo digital → usinado na máquina",
+    description: "Reprogramação e otimização da estratégia CAM pela Fanaxis, validada no gêmeo digital antes de ir para a máquina.",
   },
   {
     image: stampCover,
@@ -22,10 +26,64 @@ const projects = [
     title: "Ferramenta de estampo | material P20",
     badges: ["Reprogramação", "Simulação CAM", "Usinagem real"],
     metric: "Tempo de ciclo: 4h → 2,5h (−37,5%)",
-    description: "Reprogramação no NX CAM com o tempo de ciclo caindo de 4 horas para 2,5 horas. O vídeo mostra a simulação CAM e a usinagem real da ferramenta de estampo em material P20.",
+    before: 4,
+    after: 2.5,
+    stage: "Simulação NX CAM → usinagem real",
+    description: "Reprogramação no NX CAM. O vídeo mostra a simulação e a usinagem real da ferramenta de estampo em aço P20.",
     software: "NX CAM",
   },
 ];
+
+const fmt = (h: number) => `${String(h).replace(".", ",")}h`;
+
+/* Barra de tempo de ciclo que encolhe quando entra na tela */
+const CycleBar = ({ before, after }: { before: number; after: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [on, setOn] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setOn(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setOn(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.6 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  const pct = (after / before) * 100;
+  return (
+    <div ref={ref} className="space-y-2 font-mono text-xs" aria-label={`Tempo de ciclo de ${fmt(before)} para ${fmt(after)}`}>
+      <div className="flex items-center gap-3">
+        <span className="w-14 text-white/45 uppercase tracking-wider">Antes</span>
+        <div className="flex-1 h-2.5 bg-white/5">
+          <div className="h-full bg-white/30 w-full" />
+        </div>
+        <span className="w-10 text-right text-white/60 tabular-nums">{fmt(before)}</span>
+      </div>
+      <div className="flex items-center gap-3">
+        <span className="w-14 text-[#FE731A] uppercase tracking-wider">Depois</span>
+        <div className="flex-1 h-2.5 bg-white/5">
+          <div
+            className="h-full bg-[#FE731A] transition-[width] duration-[1400ms] ease-out"
+            style={{ width: on ? `${pct}%` : "100%" }}
+          />
+        </div>
+        <span className="w-10 text-right text-[#FE731A] tabular-nums">{fmt(after)}</span>
+      </div>
+    </div>
+  );
+};
 
 const ProjectsSection = () => {
   const [openedVideos, setOpenedVideos] = useState<Record<string, boolean>>({});
@@ -34,21 +92,26 @@ const ProjectsSection = () => {
     <section id="projetos" className="py-24 bg-background">
       <div className="container">
         <div className="mb-16">
-          <p className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-3">
-            Portfólio Técnico
+          <p className="font-mono text-xs tracking-[0.2em] uppercase text-[#FE731A] mb-3 flex items-center gap-3">
+            <span className="inline-block w-8 h-px bg-[#FE731A]" aria-hidden="true" />
+            Do gêmeo digital ao chão de fábrica
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-            Projetos Recentes
-          </h2>
+          <h2 className="text-3xl md:text-4xl text-foreground">Projetos reais</h2>
+          <p className="mt-4 text-muted-foreground max-w-xl">
+            A simulação que você viu no topo, agora na máquina. Assista à usinagem e compare o tempo de ciclo.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
-            <article
-              key={i}
-              className="card-technical bg-card rounded-lg overflow-hidden group"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
+            <article key={i} className="relative p-1.5 group">
+              <CadCorners />
+              <div className="h-full bg-[#141414] border border-white/10 overflow-hidden transition-colors group-hover:border-[#FE731A]/50">
+              <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 font-mono text-[10px] md:text-xs tracking-wider uppercase text-white/50">
+                <span>
+                  <span className="text-[#FE731A]">Case {String(i + 1).padStart(2, "0")}</span> · {p.stage}
+                </span>
+              </div>
               <div className="aspect-[4/3] overflow-hidden">
                 {p.video ? (
                   openedVideos[p.video] ? (
@@ -82,7 +145,7 @@ const ProjectsSection = () => {
                         className={`w-full h-full ${p.imageFit ?? "object-cover"} image-technical transition-transform duration-300 group-hover:scale-[1.02]`}
                       />
                       <span className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/70 via-transparent to-transparent pb-5">
-                        <span className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg">
+                        <span className="inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg">
                           <Play className="h-4 w-4" fill="currentColor" aria-hidden="true" />
                           Assistir ao case
                         </span>
@@ -101,13 +164,17 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
                   {p.badges.map((b) => (
-                    <span key={b} className="badge-technical">{b}</span>
+                    <span key={b} className="font-mono text-[10px] tracking-wider uppercase px-2 py-1 border border-white/15 text-white/60">{b}</span>
                   ))}
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{p.title}</h3>
-                <p className="font-mono text-sm tabular-nums text-primary font-medium mb-3">
-                  {p.metric}
-                </p>
+                <h3 className="text-lg font-semibold text-foreground mb-4">{p.title}</h3>
+                {p.before && p.after ? (
+                  <div className="mb-5">
+                    <CycleBar before={p.before} after={p.after} />
+                  </div>
+                ) : (
+                  <p className="font-mono text-sm tabular-nums text-primary font-medium mb-3">{p.metric}</p>
+                )}
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {p.description}
                 </p>
@@ -116,6 +183,7 @@ const ProjectsSection = () => {
                     <span className="text-xs text-muted-foreground font-mono">{p.software}</span>
                   </div>
                 )}
+              </div>
               </div>
             </article>
           ))}
