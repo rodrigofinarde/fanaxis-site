@@ -19,7 +19,7 @@ const steps = [
   {
     icon: Factory,
     title: "Validação na máquina",
-    text: "O novo programa é conferido na máquina e o tempo de ciclo é comparado com a linha de base. No rotor macho: 7h → 3h. No estampo P20: 4h → 2,5h.",
+    text: "O novo programa é conferido na máquina e o tempo de ciclo é comparado com a linha de base. O ganho é medido em horas, não em promessa.",
   },
 ];
 
