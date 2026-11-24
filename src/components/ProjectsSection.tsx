@@ -13,8 +13,8 @@ const projects = [
     metric: "Tempo de ciclo: 7h → 3h (−57%)",
     before: 7,
     after: 3,
-    stage: "Simulado no gêmeo digital → usinado na máquina",
-    description: "Reprogramação e otimização da estratégia CAM pela Fanaxis, validada no gêmeo digital antes de ir para a máquina.",
+    stage: "Reprogramação → usinagem real",
+    description: "Reprogramação e otimização da estratégia CAM pela Fanaxis.",
   },
   {
     image: stampCover,
