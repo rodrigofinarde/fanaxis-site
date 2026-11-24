@@ -100,7 +100,7 @@ const HeroSection = () => {
                   aria-label="Simulação no NX CAM: rotor sendo usinado no gêmeo digital de um centro de usinagem 5 eixos"
                 />
                 <div className="flex items-center justify-between px-3 py-2 border-t border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs text-white/50">
-                  <span>Centro de usinagem 5 eixos</span>
+                  <span className="hidden sm:inline">Centro de usinagem 5 eixos</span>
                   <span className="text-[#FE731A]">● validado antes do chão de fábrica</span>
                 </div>
               </div>
