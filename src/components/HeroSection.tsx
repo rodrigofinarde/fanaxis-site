@@ -23,6 +23,8 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-background pt-28 pb-20 md:pt-36 md:pb-28">
       {/* Grade milimetrada */}
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-60" />
+      <div aria-hidden="true" className="glow w-[640px] h-[640px] -top-40 right-[-120px] md:right-[5%]" />
+      <div aria-hidden="true" className="glow-soft w-[520px] h-[520px] top-1/3 -left-40" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
 
       <div className="container relative z-10">

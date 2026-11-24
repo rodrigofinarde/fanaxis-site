@@ -32,6 +32,7 @@ const ContactSection = () => {
   return (
     <section id="contato" className="relative py-24 md:py-32 bg-background overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-30" />
+      <div aria-hidden="true" className="glow w-[700px] h-[700px] top-1/4 left-1/2 -translate-x-1/2 opacity-80" />
       <div className="container relative">
         <div className="max-w-2xl mx-auto text-center">
           <p className="section-kicker justify-center mb-4">Contato</p>

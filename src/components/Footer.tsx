@@ -29,7 +29,7 @@ const headCls = "font-mono text-[11px] tracking-[0.22em] uppercase text-white/40
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#070707] border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-[#0C0D10] border-t border-white/10 overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-25" />
       <div className="container relative pt-20 pb-24">
         <div className="grid gap-12 md:grid-cols-12">

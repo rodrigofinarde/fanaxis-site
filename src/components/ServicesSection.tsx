@@ -32,6 +32,7 @@ const ServicesSection = () => {
   return (
     <section className="relative py-24 md:py-32 bg-background overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-40" />
+      <div aria-hidden="true" className="glow-soft w-[600px] h-[600px] -bottom-60 right-0" />
       <div className="container relative">
         <div className="mb-14 md:mb-20">
           <p className="section-kicker mb-4">

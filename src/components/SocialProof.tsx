@@ -15,7 +15,9 @@ const metrics = [
 
 const SocialProof = () => {
   return (
-    <section className="py-24 md:py-32 bg-background border-y border-white/5">
+    <section className="relative py-24 md:py-32 bg-background">
+      <div aria-hidden="true" className="section-divider absolute top-0 inset-x-0" />
+      <div aria-hidden="true" className="section-divider absolute bottom-0 inset-x-0" />
       <div className="container">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
           <div className="lg:col-span-5">

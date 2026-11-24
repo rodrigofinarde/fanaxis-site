@@ -43,7 +43,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         solid
-          ? "bg-[#0A0A0A]/85 backdrop-blur-md border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+          ? "bg-[#111317]/80 backdrop-blur-md border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -182,7 +182,7 @@ const Header = () => {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/10 py-6">
+        <nav className="md:hidden bg-[#111317]/95 backdrop-blur-md border-t border-white/10 py-6">
           <div className="container flex flex-col gap-4">
             <p className="section-kicker">Serviços</p>
             <Link

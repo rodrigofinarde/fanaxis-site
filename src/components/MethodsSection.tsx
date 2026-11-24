@@ -25,8 +25,9 @@ const steps = [
 
 const MethodsSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-secondary">
-      <div className="container">
+    <section className="relative overflow-hidden py-24 md:py-32 bg-secondary">
+      <div aria-hidden="true" className="glow-soft w-[600px] h-[600px] -top-40 right-[-100px]" />
+      <div className="container relative">
         <div className="mb-14 md:mb-20">
           <p className="section-kicker mb-4">Como trabalhamos</p>
           <h2 className="text-3xl md:text-4xl text-foreground">

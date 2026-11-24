@@ -89,8 +89,9 @@ const ProjectsSection = () => {
   const [openedVideos, setOpenedVideos] = useState<Record<string, boolean>>({});
 
   return (
-    <section id="projetos" className="py-24 md:py-32 bg-secondary">
-      <div className="container">
+    <section id="projetos" className="relative overflow-hidden py-24 md:py-32 bg-secondary">
+      <div aria-hidden="true" className="glow w-[700px] h-[500px] top-1/4 -left-60 opacity-70" />
+      <div className="container relative">
         <div className="mb-14 md:mb-20">
           <p className="section-kicker mb-4">
             Do gêmeo digital ao chão de fábrica
