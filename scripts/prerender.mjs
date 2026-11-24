@@ -23,13 +23,27 @@ function dedupe(page, head) {
   return out;
 }
 
+// Espelha título, descrição e imagem da página nas tags do Twitter/X
+function twitterFromOg(page, head) {
+  const og = (k) => head.match(new RegExp(`property="og:${k}" content="([^"]*)"`))?.[1];
+  let out = page;
+  let extra = "";
+  for (const k of ["title", "description", "image"]) {
+    const v = og(k);
+    if (!v) continue;
+    out = out.replace(new RegExp(`<meta[^>]*name="twitter:${k}"[^>]*>\\s*`, "g"), "");
+    extra += `<meta name="twitter:${k}" content="${v}" />`;
+  }
+  return { page: out, extra };
+}
+
 let count = 0;
 for (const url of routes) {
   const { html, head } = render(url);
   if (!html || html.length < 500) throw new Error(`Página vazia na pré-renderização: ${url}`);
 
-  let page = dedupe(template, head);
-  page = page.replace("</head>", `    ${head}\n  </head>`);
+  const tw = twitterFromOg(dedupe(template, head), head);
+  let page = tw.page.replace("</head>", `    ${head}${tw.extra}\n  </head>`);
   page = page.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
 
   const file = url === "/" ? "index.html" : `${url.slice(1)}.html`;
