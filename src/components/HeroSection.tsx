@@ -83,7 +83,7 @@ const HeroSection = () => {
                 <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs tracking-wider uppercase text-white/60">
                   <span className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#FE731A] animate-pulse" aria-hidden="true" />
-                    Simulação · NX CAM
+                    Simulação · NX CAM / hyperMILL
                   </span>
                   <span className="hidden sm:inline">Gêmeo digital da máquina</span>
                 </div>
@@ -97,10 +97,10 @@ const HeroSection = () => {
                   loop
                   playsInline
                   preload="metadata"
-                  aria-label="Simulação no NX CAM: rotor sendo usinado no gêmeo digital de um centro de usinagem 5 eixos"
+                  aria-label="Trechos de simulações FANAXIS no NX CAM e no hyperMILL: centros de usinagem 5 eixos, rotores, apalpamento e trajetórias de ferramenta"
                 />
                 <div className="flex items-center justify-between px-3 py-2 border-t border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs text-white/50">
-                  <span className="hidden sm:inline">Centro de usinagem 5 eixos</span>
+                  <span className="hidden sm:inline">Projetos reais FANAXIS</span>
                   <span className="text-[#FE731A]">● validado antes do chão de fábrica</span>
                 </div>
               </div>
