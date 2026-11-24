@@ -3,7 +3,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 /* Faz o conteúdo surgir com um fade suave quando entra na tela (uma vez só). */
 const Reveal = ({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  // No HTML pré-renderizado o conteúdo já vem visível; no navegador, entra com o fade
+  const [visible, setVisible] = useState(() => typeof window === "undefined");
 
   useEffect(() => {
     const el = ref.current;
