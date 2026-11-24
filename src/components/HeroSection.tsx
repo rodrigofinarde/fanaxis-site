@@ -1,70 +1,118 @@
-import heroBg from "@/assets/hero-bg.webp";
+import { useEffect, useRef, useState } from "react";
 import { ArrowDown, FileText } from "lucide-react";
 
+const metrics = [
+  { value: "7h → 3h", label: "Rotor macho · ciclo −57%" },
+  { value: "4h → 2,5h", label: "Estampo P20 · ciclo −37,5%" },
+  { value: "3-4-5 eixos", label: "Posicionado e simultâneo" },
+  { value: "NX · hyperMILL", label: "Programação e pós-processadores" },
+];
+
+/* Marcas de mira nos cantos, como na janela gráfica do CAM */
+const Corners = () => (
+  <>
+    {[
+      "top-0 left-0 border-t-2 border-l-2",
+      "top-0 right-0 border-t-2 border-r-2",
+      "bottom-0 left-0 border-b-2 border-l-2",
+      "bottom-0 right-0 border-b-2 border-r-2",
+    ].map((c) => (
+      <span key={c} aria-hidden="true" className={`absolute w-5 h-5 border-[#FE731A] ${c}`} />
+    ))}
+  </>
+);
+
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    if (mq.matches) videoRef.current?.pause();
+  }, []);
+
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="Fresamento CNC em 5 eixos"
-          className="w-full h-full object-cover scale-105"
-        />
+    <section className="relative overflow-hidden bg-[#0A0A0A] pt-28 pb-16 md:pt-32 md:pb-20">
+      {/* Grade milimetrada */}
+      <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-60" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A0A0A]" />
 
-        {/* 🔥 Overlay PERFEITO (equilíbrio entre contraste e imagem) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
-      </div>
+      <div className="container relative z-10">
+        <div className="grid lg:grid-cols-[1fr_1.15fr] gap-10 lg:gap-14 items-center">
+          {/* Texto */}
+          <div className="order-2 lg:order-1">
+            <p className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase text-[#FE731A] mb-5 flex items-center gap-3">
+              <span className="inline-block w-8 h-px bg-[#FE731A]" aria-hidden="true" />
+              Gêmeos digitais & programação CAM
+            </p>
 
-      {/* Conteúdo */}
-      <div className="container relative z-10 py-24">
-        <div className="max-w-3xl">
-          
-          <p className="font-mono text-sm tracking-widest uppercase text-white/70 mb-6">
-            FANAXIS • ENGENHARIA DE MANUFATURA
-          </p>
+            <h1 className="text-5xl md:text-6xl xl:text-7xl uppercase leading-[1.02] text-white mb-6">
+              Engenharia de métodos e processos de{" "}
+              <span className="text-[#FE731A]">usinagem</span>
+            </h1>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl uppercase leading-[1.02] text-white mb-6">
-            Engenharia de métodos e processos de{" "}
-            <span className="text-[#FE731A]">
-              usinagem
-            </span>
-          </h1>
+            <p className="text-lg text-white/75 max-w-xl mb-9 leading-relaxed">
+              Programamos e validamos cada peça na réplica digital da sua máquina antes de ela
+              chegar ao chão de fábrica.
+            </p>
 
-          <p className="text-lg text-white/80 max-w-xl mb-10 leading-relaxed">
-            Programação CAD/CAM/CNC baseada em gêmeos digitais customizados.
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            
-            <a
-              href="#projetos"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#FE731A] text-white font-medium text-sm rounded-sm hover:bg-[#E5620F] transition-all hover:scale-105"
-            >
-              Ver Projetos Técnicos
-              <ArrowDown className="w-4 h-4" />
-            </a>
-
-            <a
-              href="#contato"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white font-medium text-sm rounded-sm hover:bg-white/10 transition-all hover:scale-105"
-            >
-              <FileText className="w-4 h-4" />
-              Solicitar Análise Técnica
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#projetos"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FE731A] text-white font-medium text-sm rounded-sm hover:bg-[#E5620F] transition-colors"
+              >
+                Ver projetos técnicos
+                <ArrowDown className="w-4 h-4" />
+              </a>
+              <a
+                href="#contato"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-white/25 text-white font-medium text-sm rounded-sm hover:border-[#FE731A] hover:text-[#FE731A] transition-colors"
+              >
+                <FileText className="w-4 h-4" />
+                Solicitar análise técnica
+              </a>
+            </div>
           </div>
+
+          {/* Viewport de simulação */}
+          <figure className="order-1 lg:order-2 relative">
+            <div className="relative p-2 md:p-3">
+              <Corners />
+              <div className="relative overflow-hidden bg-black border border-white/10">
+                <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs tracking-wider uppercase text-white/60">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FE731A] animate-pulse" aria-hidden="true" />
+                    Simulação · NX CAM
+                  </span>
+                  <span className="hidden sm:inline">Gêmeo digital da máquina</span>
+                </div>
+                <video
+                  ref={videoRef}
+                  className="block w-full aspect-video object-cover"
+                  src="/assets/hero-gemeo-digital.mp4"
+                  poster="/assets/hero-gemeo-digital-poster.jpg"
+                  autoPlay={!reduceMotion}
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="Simulação no NX CAM: rotor sendo usinado no gêmeo digital de um centro de usinagem 5 eixos"
+                />
+                <div className="flex items-center justify-between px-3 py-2 border-t border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs text-white/50">
+                  <span>Centro de usinagem 5 eixos</span>
+                  <span className="text-[#FE731A]">● validado antes do chão de fábrica</span>
+                </div>
+              </div>
+            </div>
+          </figure>
         </div>
 
-        {/* Metrics */}
-        <div className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
-          {[
-            { value: "7h\u00a0→\u00a03h", label: "Rotor macho · ciclo −57%" },
-            { value: "4h\u00a0→\u00a02,5h", label: "Estampo P20 · ciclo −37,5%" },
-            { value: "3-4-5 eixos", label: "Programação posicionada e simultânea" },
-            { value: "NX\u00a0· hyperMILL", label: "Programação CAM e pós-processadores" },
-          ].map((m) => (
-            <div key={m.label} className="border-l border-white/20 pl-4">
+        {/* Números com linha de cota */}
+        <div className="mt-14 md:mt-16 border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
+          {metrics.map((m) => (
+            <div key={m.label} className="relative pl-4">
+              <span aria-hidden="true" className="absolute left-0 top-1 bottom-1 w-px bg-[#FE731A]/60" />
               <p className="font-display text-2xl md:text-3xl xl:text-4xl leading-tight tabular-nums text-[#FE731A]">
                 {m.value}
               </p>
