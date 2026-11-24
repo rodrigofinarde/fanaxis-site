@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import MethodsSection from "@/components/MethodsSection";
 import ContactSection from "@/components/ContactSection";
+import Reveal from "@/components/Reveal";
 import SocialProof from "@/components/SocialProof";
 import Footer from "@/components/Footer";
 
@@ -46,18 +47,18 @@ const Index = () => {
         <HeroSection />
 
         <section id="servicos">
-          <ServicesSection />
+          <Reveal><ServicesSection /></Reveal>
         </section>
 
-        <ProjectsSection />
+        <Reveal><ProjectsSection /></Reveal>
 
-        <SocialProof />
+        <Reveal><SocialProof /></Reveal>
 
         <section id="metodos">
-          <MethodsSection />
+          <Reveal><MethodsSection /></Reveal>
         </section>
 
-        <ContactSection />
+        <Reveal><ContactSection /></Reveal>
       </main>
 
       <Footer />

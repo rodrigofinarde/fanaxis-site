@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import CadCorners from "./CadCorners";
 import { ArrowDown, FileText } from "lucide-react";
 
 const metrics = [
@@ -7,20 +8,6 @@ const metrics = [
   { value: "3-4-5 eixos", label: "Posicionado e simultâneo" },
   { value: "NX · hyperMILL", label: "Programação e pós-processadores" },
 ];
-
-/* Marcas de mira nos cantos, como na janela gráfica do CAM */
-const Corners = () => (
-  <>
-    {[
-      "top-0 left-0 border-t-2 border-l-2",
-      "top-0 right-0 border-t-2 border-r-2",
-      "bottom-0 left-0 border-b-2 border-l-2",
-      "bottom-0 right-0 border-b-2 border-r-2",
-    ].map((c) => (
-      <span key={c} aria-hidden="true" className={`absolute w-5 h-5 border-[#FE731A] ${c}`} />
-    ))}
-  </>
-);
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -33,17 +20,16 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#0A0A0A] pt-28 pb-16 md:pt-32 md:pb-20">
+    <section className="relative overflow-hidden bg-background pt-28 pb-20 md:pt-36 md:pb-28">
       {/* Grade milimetrada */}
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-60" />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A0A0A]" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-[1fr_1.15fr] gap-10 lg:gap-14 items-center">
           {/* Texto */}
           <div className="order-2 lg:order-1">
-            <p className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase text-[#FE731A] mb-5 flex items-center gap-3">
-              <span className="inline-block w-8 h-px bg-[#FE731A]" aria-hidden="true" />
+            <p className="section-kicker mb-6">
               Gêmeos digitais & programação CAM
             </p>
 
@@ -78,7 +64,7 @@ const HeroSection = () => {
           {/* Viewport de simulação */}
           <figure className="order-1 lg:order-2 relative">
             <div className="relative p-2 md:p-3">
-              <Corners />
+              <CadCorners size="w-5 h-5" />
               <div className="relative overflow-hidden bg-black border border-white/10">
                 <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs tracking-wider uppercase text-white/60">
                   <span className="flex items-center gap-2">
@@ -101,7 +87,7 @@ const HeroSection = () => {
                 />
                 <div className="flex items-center justify-between px-3 py-2 border-t border-white/10 bg-[#141414] font-mono text-[10px] md:text-xs text-white/50">
                   <span className="hidden sm:inline">Projetos reais FANAXIS</span>
-                  <span className="text-[#FE731A]">● validado antes do chão de fábrica</span>
+                  <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#FE731A]" aria-hidden="true" />validado antes do chão de fábrica</span>
                 </div>
               </div>
             </div>

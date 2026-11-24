@@ -25,13 +25,11 @@ const steps = [
 
 const MethodsSection = () => {
   return (
-    <section className="py-24 bg-secondary">
+    <section className="py-24 md:py-32 bg-secondary">
       <div className="container">
-        <div className="mb-16">
-          <p className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-3">
-            Como trabalhamos
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
+        <div className="mb-14 md:mb-20">
+          <p className="section-kicker mb-4">Como trabalhamos</p>
+          <h2 className="text-3xl md:text-4xl text-foreground">
             Métodos & Otimização
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl">
@@ -41,15 +39,16 @@ const MethodsSection = () => {
 
         <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
-            <li key={s.title} className="card-technical bg-background rounded-lg p-8 flex flex-col">
+            <li key={s.title} className="relative bg-background border border-white/10 p-8 flex flex-col transition-all duration-300 hover:border-white/20 hover:-translate-y-1 group">
+              <span aria-hidden="true" className="absolute top-0 left-0 h-px w-0 bg-[#FE731A] transition-all duration-500 group-hover:w-full" />
               <div className="flex items-center justify-between mb-6">
-                <s.icon className="w-6 h-6 text-primary" strokeWidth={1.5} aria-hidden="true" />
+                <s.icon className="w-6 h-6 text-white/50 group-hover:text-[#FE731A] transition-colors" strokeWidth={1.5} aria-hidden="true" />
                 <span className="font-display text-3xl text-white/15 tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
               <h3 className="font-semibold text-foreground mb-3">{s.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+              <p className="text-sm text-white/55 leading-relaxed">{s.text}</p>
             </li>
           ))}
         </ol>

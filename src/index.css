@@ -5,28 +5,34 @@
 /* 🔥 SCROLL SUAVE (AGORA VAI FUNCIONAR) */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 /* ===== FANAXIS THEME ===== */
 
 :root {
-  --background: 220 10% 12%; /* grafite escuro */
+  --background: 240 4% 5%; /* preto grafite */
   --foreground: 0 0% 100%; /* branco */
 
   --primary: 23 99% 55%; /* laranja Fanaxis */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 220 10% 20%;
+  --secondary: 240 3% 8%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 220 10% 25%;
-  --muted-foreground: 0 0% 70%;
+  --muted: 240 3% 14%;
+  --muted-foreground: 0 0% 66%;
+
+  --card: 240 3% 8%;
+  --card-foreground: 0 0% 100%;
+  --popover: 240 4% 6%;
+  --popover-foreground: 0 0% 100%;
 
   --accent: 23 99% 55%;
   --accent-foreground: 0 0% 100%;
 
-  --border: 220 10% 25%;
-  --input: 220 10% 25%;
+  --border: 240 3% 16%;
+  --input: 240 3% 18%;
   --ring: 23 99% 55%;
 }
 
@@ -50,40 +56,6 @@ body {
 
 }
 
-.floating-whatsapp {
-  position: fixed;
-  right: max(20px, env(safe-area-inset-right));
-  bottom: max(20px, env(safe-area-inset-bottom));
-  z-index: 9999;
-  display: block;
-  width: 65px;
-  height: 65px;
-  animation: whatsapp-pulse 1.8s infinite;
-}
-
-.floating-whatsapp img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes whatsapp-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.15);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .floating-whatsapp {
-    animation: none;
-  }
-}
-
 /* Grade milimetrada estilo folha técnica / janela de CAM */
 .bg-blueprint {
   background-image:
@@ -92,4 +64,60 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+}
+
+/* Entrada suave das seções ao rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Rótulo de seção: traço laranja + texto discreto */
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.section-kicker::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: #FE731A;
+}
+
+/* Links do menu: sublinhado laranja fino que cresce no hover */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: #FE731A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
 }

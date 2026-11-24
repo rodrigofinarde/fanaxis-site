@@ -1,18 +1,13 @@
-import { Award, Cog, Handshake } from "lucide-react";
-
 const metrics = [
   {
-    icon: Award,
     value: "20+",
     label: "anos de experiência em usinagem",
   },
   {
-    icon: Cog,
     value: "5 eixos",
     label: "especialistas em programação simultânea",
   },
   {
-    icon: Handshake,
     value: "Gêmeo digital",
     label: "machine kits e pós-processadores sob medida para a sua máquina",
   },
@@ -20,32 +15,32 @@ const metrics = [
 
 const SocialProof = () => {
   return (
-    <section className="py-20 bg-[#1a1a1a]">
+    <section className="py-24 md:py-32 bg-background border-y border-white/5">
       <div className="container">
-        <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-3 text-center">
-          Por que nos escolher
-        </p>
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 text-center">
-          Experiência de chão de fábrica
-        </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Mais de duas décadas de experiência em usinagem CNC, com foco em resultados
-          medidos na máquina, não na apresentação.
-        </p>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+          <div className="lg:col-span-5">
+            <p className="section-kicker mb-4">Por que nos escolher</p>
+            <h2 className="text-3xl md:text-4xl text-white mb-5">Experiência de chão de fábrica</h2>
+            <p className="text-white/55 max-w-md leading-relaxed">
+              Mais de duas décadas de experiência em usinagem CNC, com foco em resultados
+              medidos na máquina, não na apresentação.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {metrics.map((m, i) => (
-            <div
-              key={i}
-              className="text-center border border-white/10 rounded-lg p-8 bg-background/50"
-            >
-              <m.icon className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
-              <p className="font-mono text-3xl md:text-4xl font-bold text-white mb-2">
-                {m.value}
-              </p>
-              <p className="text-sm text-gray-400">{m.label}</p>
-            </div>
-          ))}
+          <dl className="lg:col-span-7 grid sm:grid-cols-3 border-t border-white/10 sm:border-t-0">
+            {metrics.map((m) => (
+              <div
+                key={m.label}
+                className="py-6 sm:py-2 sm:px-8 first:sm:pl-0 border-b sm:border-b-0 sm:border-l first:sm:border-l-0 border-white/10"
+              >
+                <dt className="sr-only">{m.label}</dt>
+                <dd>
+                  <p className="font-display text-4xl md:text-5xl text-white leading-none mb-3">{m.value}</p>
+                  <p className="text-sm text-white/50 leading-snug">{m.label}</p>
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

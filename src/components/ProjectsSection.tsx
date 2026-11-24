@@ -89,11 +89,10 @@ const ProjectsSection = () => {
   const [openedVideos, setOpenedVideos] = useState<Record<string, boolean>>({});
 
   return (
-    <section id="projetos" className="py-24 bg-background">
+    <section id="projetos" className="py-24 md:py-32 bg-secondary">
       <div className="container">
-        <div className="mb-16">
-          <p className="font-mono text-xs tracking-[0.2em] uppercase text-[#FE731A] mb-3 flex items-center gap-3">
-            <span className="inline-block w-8 h-px bg-[#FE731A]" aria-hidden="true" />
+        <div className="mb-14 md:mb-20">
+          <p className="section-kicker mb-4">
             Do gêmeo digital ao chão de fábrica
           </p>
           <h2 className="text-3xl md:text-4xl text-foreground">Projetos reais</h2>
@@ -102,14 +101,14 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
             <article key={i} className="relative p-1.5 group">
-              <CadCorners />
-              <div className="h-full bg-[#141414] border border-white/10 overflow-hidden transition-colors group-hover:border-[#FE731A]/50">
+              <CadCorners muted />
+              <div className="h-full bg-card border border-white/10 overflow-hidden transition-all duration-300 group-hover:border-white/20 group-hover:-translate-y-1">
               <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 font-mono text-[10px] md:text-xs tracking-wider uppercase text-white/50">
                 <span>
-                  <span className="text-[#FE731A]">Case {String(i + 1).padStart(2, "0")}</span> · {p.stage}
+                  <span className="text-white/80">Case {String(i + 1).padStart(2, "0")}</span> · {p.stage}
                 </span>
               </div>
               <div className="aspect-[4/3] overflow-hidden">

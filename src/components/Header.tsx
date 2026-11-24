@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-// ✅ IMPORTAÇÃO CORRETA (VITE)
 import logoIcon from "@/assets/logo-icon.png";
 import logoText from "@/assets/logo-text.png";
 
@@ -12,32 +11,56 @@ const Header = () => {
   const location = useLocation();
 
   const isHomePage = location.pathname === "/";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  /* Transparente sobre o topo da home; sólido e mais fino ao rolar */
+  const solid = scrolled || !isHomePage || open;
+
   const logoImages = (
     <>
       <img
         src={logoIcon}
-        alt="Fanaxis Icon"
-        className="h-10 w-auto"
+        alt=""
+        aria-hidden="true"
+        className={`w-auto transition-all duration-300 ${solid ? "h-8" : "h-10"}`}
       />
       <img
         src={logoText}
         alt="Fanaxis"
-        className="h-6 w-auto"
+        className={`w-auto transition-all duration-300 ${solid ? "h-5" : "h-6"}`}
       />
     </>
   );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1f1f1f] border-b border-[#FE731A]/40">
-      <div className="container flex items-center justify-between h-20">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        solid
+          ? "bg-[#0A0A0A]/85 backdrop-blur-md border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
+      <div className={`container flex items-center justify-between transition-all duration-300 ${solid ? "h-16" : "h-20"}`}>
 
         {/* LOGO */}
         <Link
           to="/"
+          aria-label="Fanaxis — página inicial"
           className="flex flex-col items-start gap-1"
         >
           <span className="flex items-center gap-3">{logoImages}</span>
-          <span className="self-stretch text-center font-sans text-xs tracking-normal text-white/70">
+          <span
+            className={`self-stretch text-center font-sans text-[11px] tracking-[0.08em] text-white/60 transition-all duration-300 overflow-hidden ${
+              solid ? "max-h-0 opacity-0" : "max-h-5 opacity-100"
+            }`}
+          >
             Advanced Machining Solutions
           </span>
         </Link>
@@ -47,7 +70,7 @@ const Header = () => {
           {/* Dropdown Serviços */}
           <div className="relative group">
             <button
-              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
+              className="nav-link text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
               onClick={() => setServicesOpen(!servicesOpen)}
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
@@ -57,38 +80,40 @@ const Header = () => {
             </button>
             {servicesOpen && (
               <div
-                className="absolute top-full left-0 mt-1 w-64 bg-[#1a1a1a] border border-white/10 rounded-lg shadow-xl py-2"
+                className="absolute top-full left-0 pt-3 w-64"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
+                <div className="bg-[#0F0F10]/95 backdrop-blur-md border border-white/10 shadow-2xl py-2">
                 <Link
                   to="/servicos/programacao-cam"
-                  className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
                   Programação CAD/CAM/CNC
                 </Link>
                 <Link
                   to="/servicos/gemeo-digital"
-                  className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
                   Gêmeo Digital CNC
                 </Link>
                 <Link
                   to="/servicos/consultoria-usinagem"
-                  className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
                   Consultoria em Usinagem
                 </Link>
                 <Link
                   to="/servicos/digitalizacao-processos"
-                  className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
                   Digitalização de Processos
                 </Link>
+                </div>
               </div>
             )}
           </div>
@@ -101,7 +126,7 @@ const Header = () => {
               <a
                 key={label}
                 href={href}
-                className="text-sm text-white/70 hover:text-white transition-colors"
+                className="nav-link text-sm text-white/70 hover:text-white transition-colors"
               >
                 {label}
               </a>
@@ -109,7 +134,7 @@ const Header = () => {
               <Link
                 key={label}
                 to={href}
-                className="text-sm text-white/70 hover:text-white transition-colors"
+                className="nav-link text-sm text-white/70 hover:text-white transition-colors"
               >
                 {label}
               </Link>
@@ -118,28 +143,28 @@ const Header = () => {
 
           <Link
             to="/sobre"
-            className="text-sm text-white/70 hover:text-white transition-colors"
+            className="nav-link text-sm text-white/70 hover:text-white transition-colors"
           >
             Sobre
           </Link>
 
           <Link
             to="/blog"
-            className="text-sm text-white/70 hover:text-white transition-colors"
+            className="nav-link text-sm text-white/70 hover:text-white transition-colors"
           >
             Blog
           </Link>
 
           <Link
             to="/faq"
-            className="text-sm text-white/70 hover:text-white transition-colors"
+            className="nav-link text-sm text-white/70 hover:text-white transition-colors"
           >
             FAQ
           </Link>
 
           <a
             href={isHomePage ? "/#contato" : "/#contato"}
-            className="text-sm bg-[#FE731A] hover:bg-[#E5620F] text-white px-4 py-2 rounded-sm transition-all hover:scale-105 font-medium"
+            className="text-sm border border-[#FE731A] text-white hover:bg-[#FE731A] px-5 py-2 rounded-sm transition-colors font-medium tracking-wide"
           >
             Contato
           </a>
@@ -147,7 +172,9 @@ const Header = () => {
 
         {/* MOBILE */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white p-2 -mr-2"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
           onClick={() => setOpen(!open)}
         >
           {open ? <X /> : <Menu />}
@@ -155,9 +182,9 @@ const Header = () => {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-[#1f1f1f] border-t border-[#FE731A]/20 py-4">
+        <nav className="md:hidden bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/10 py-6">
           <div className="container flex flex-col gap-4">
-            <p className="font-mono text-xs text-[#FE731A] uppercase tracking-wider">Serviços</p>
+            <p className="section-kicker">Serviços</p>
             <Link
               to="/servicos/programacao-cam"
               onClick={() => setOpen(false)}

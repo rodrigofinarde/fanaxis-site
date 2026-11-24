@@ -1,5 +1,5 @@
 /* Marcas de mira nos cantos, como na janela gráfica do CAM */
-const CadCorners = ({ size = "w-4 h-4" }: { size?: string }) => (
+const CadCorners = ({ size = "w-4 h-4", muted = false }: { size?: string; muted?: boolean }) => (
   <>
     {[
       "top-0 left-0 border-t-2 border-l-2",
@@ -10,7 +10,9 @@ const CadCorners = ({ size = "w-4 h-4" }: { size?: string }) => (
       <span
         key={c}
         aria-hidden="true"
-        className={`pointer-events-none absolute ${size} border-[#FE731A] ${c}`}
+        className={`pointer-events-none absolute ${size} ${c} transition-colors duration-300 ${
+          muted ? "border-white/20 group-hover:border-[#FE731A]" : "border-[#FE731A]"
+        }`}
       />
     ))}
   </>

@@ -30,20 +30,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-24 bg-secondary">
-      <div className="container">
+    <section id="contato" className="relative py-24 md:py-32 bg-background overflow-hidden">
+      <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-30" />
+      <div className="container relative">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-3">
-            Contato
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+          <p className="section-kicker justify-center mb-4">Contato</p>
+          <h2 className="text-3xl md:text-4xl text-foreground mb-4">
             Solicite uma Análise Técnica
           </h2>
           <p className="text-muted-foreground mb-10">
             Envie os dados da sua peça ou processo atual. Retorno com diagnóstico técnico em até 48h.
           </p>
 
-          <div className="card-technical bg-background rounded-lg p-8 text-left">
+          <div className="relative bg-card border border-white/10 p-8 md:p-10 text-left">
             
             <form onSubmit={handleSubmit} className="space-y-6">
 
@@ -57,7 +56,7 @@ const ContactSection = () => {
                     type="text"
                     name="nome"
                     required
-                    className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
+                    className="w-full px-3 py-2 bg-background border border-white/10 focus:border-[#FE731A] focus:outline-none transition-colors rounded-none text-sm"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -67,7 +66,7 @@ const ContactSection = () => {
                   <input
                     type="text"
                     name="empresa"
-                    className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
+                    className="w-full px-3 py-2 bg-background border border-white/10 focus:border-[#FE731A] focus:outline-none transition-colors rounded-none text-sm"
                     placeholder="Nome da empresa"
                   />
                 </div>
@@ -80,7 +79,7 @@ const ContactSection = () => {
                     type="email"
                     name="email"
                     required
-                    className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
+                    className="w-full px-3 py-2 bg-background border border-white/10 focus:border-[#FE731A] focus:outline-none transition-colors rounded-none text-sm"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -91,7 +90,7 @@ const ContactSection = () => {
                     type="tel"
                     name="whatsapp"
                     inputMode="tel"
-                    className="w-full px-3 py-2 bg-secondary rounded-sm text-sm"
+                    className="w-full px-3 py-2 bg-background border border-white/10 focus:border-[#FE731A] focus:outline-none transition-colors rounded-none text-sm"
                     placeholder="(11) 90000-0000"
                   />
                 </div>
@@ -105,7 +104,7 @@ const ContactSection = () => {
                   rows={4}
                   name="mensagem"
                   required
-                  className="w-full px-3 py-2 bg-secondary rounded-sm text-sm resize-none"
+                  className="w-full px-3 py-2 bg-background border border-white/10 focus:border-[#FE731A] focus:outline-none transition-colors rounded-none text-sm resize-none"
                   placeholder="Peça, material, máquina e comando (ex.: DMU 125P / Siemens 840D), tolerâncias, tempo de ciclo atual..."
                 />
               </div>
@@ -113,7 +112,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={enviando}
-                className="w-full px-6 py-3 bg-primary text-white rounded-sm disabled:opacity-60"
+                className="w-full px-6 py-3.5 bg-primary hover:bg-[#E5620F] text-white font-medium tracking-wide transition-colors disabled:opacity-60"
               >
                 {enviando ? "Enviando..." : "Enviar Solicitação"}
               </button>

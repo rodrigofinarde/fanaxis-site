@@ -30,12 +30,11 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative py-24 bg-background overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-background overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-40" />
       <div className="container relative">
-        <div className="mb-16">
-          <p className="font-mono text-xs tracking-[0.2em] uppercase text-[#FE731A] mb-3 flex items-center gap-3">
-            <span className="inline-block w-8 h-px bg-[#FE731A]" aria-hidden="true" />
+        <div className="mb-14 md:mb-20">
+          <p className="section-kicker mb-4">
             Competências
           </p>
           <h2 className="text-3xl md:text-4xl text-foreground">Serviços Técnicos</h2>
@@ -44,19 +43,19 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <article key={s.title} className="relative p-1.5 group">
-              <CadCorners size="w-3 h-3" />
-              <div className="h-full flex flex-col bg-[#141414] border border-white/10 transition-colors group-hover:border-[#FE731A]/50">
+              <CadCorners size="w-3 h-3" muted />
+              <div className="h-full flex flex-col bg-card border border-white/10 transition-all duration-300 group-hover:border-white/20 group-hover:-translate-y-1">
                 {/* Barra da janela */}
                 <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 font-mono text-[10px] tracking-wider uppercase text-white/50">
                   <span>
-                    <span className="text-[#FE731A]">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-white/40 group-hover:text-[#FE731A] transition-colors">{String(i + 1).padStart(2, "0")}</span>
                   </span>
-                  <s.icon className="w-4 h-4 text-[#FE731A]" strokeWidth={1.5} aria-hidden="true" />
+                  <s.icon className="w-4 h-4 text-white/45 group-hover:text-[#FE731A] transition-colors" strokeWidth={1.5} aria-hidden="true" />
                 </div>
 
                 <div className="p-5 flex-1">
                   <h3 className="font-semibold text-foreground mb-2">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{s.description}</p>
+                  <p className="text-sm text-white/55 leading-relaxed">{s.description}</p>
                 </div>
               </div>
             </article>
