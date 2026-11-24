@@ -85,7 +85,7 @@ const HeroSection = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#FE731A] animate-pulse" aria-hidden="true" />
                     Simulação · NX CAM / hyperMILL
                   </span>
-                  <span className="hidden sm:inline">Gêmeo digital da máquina</span>
+                  <span className="hidden xl:inline">Gêmeo digital da máquina</span>
                 </div>
                 <video
                   ref={videoRef}
