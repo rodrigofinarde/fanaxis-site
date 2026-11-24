@@ -38,7 +38,7 @@ function twitterFromOg(page, head) {
 }
 
 let count = 0;
-for (const url of routes) {
+for (const url of [...routes, "/404"]) {
   const { html, head } = render(url);
   if (!html || html.length < 500) throw new Error(`Página vazia na pré-renderização: ${url}`);
 
@@ -46,6 +46,7 @@ for (const url of routes) {
   let page = tw.page.replace("</head>", `    ${head}${tw.extra}\n  </head>`);
   page = page.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
 
+  // "/404" cai na rota curinga do site (página não encontrada) e vira o 404.html servido pela Vercel
   const file = url === "/" ? "index.html" : `${url.slice(1)}.html`;
   const out = path.join(dist, file);
   fs.mkdirSync(path.dirname(out), { recursive: true });
