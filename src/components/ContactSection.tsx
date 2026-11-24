@@ -148,7 +148,7 @@ const ContactSection = () => {
               </a>
 
               <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> São Paulo, SP
+                <MapPin className="w-4 h-4" /> São Bernardo do Campo, SP
               </span>
             </div>
 
