@@ -18,37 +18,27 @@ const empresa = [
   ["FAQ", "/faq"],
 ];
 
-/* Botões das redes com as cores oficiais de cada marca */
+/* Botões das redes no padrão de cores FANAXIS */
 const btnCls =
-  "inline-flex h-12 w-12 items-center justify-center border border-white/15 bg-[#1B1D22] transition-all duration-300 hover:border-white/40 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FE731A]";
+  "inline-flex h-12 w-12 items-center justify-center border border-white/20 bg-[#1B1D22] text-white/85 transition-all duration-300 hover:border-[#FE731A] hover:bg-[#FE731A] hover:text-black hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FE731A]";
 
 const InstagramLogo = () => (
-  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7">
-    <defs>
-      <linearGradient id="instagram-logo-gradient" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0%" stopColor="#FFDC80" />
-        <stop offset="45%" stopColor="#F77737" />
-        <stop offset="72%" stopColor="#E1306C" />
-        <stop offset="100%" stopColor="#833AB4" />
-      </linearGradient>
-    </defs>
-    <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="url(#instagram-logo-gradient)" strokeWidth="2.2" />
-    <circle cx="12" cy="12" r="4.1" fill="none" stroke="url(#instagram-logo-gradient)" strokeWidth="2.2" />
-    <circle cx="17.45" cy="6.7" r="1.25" fill="#F77737" />
+  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+    <circle cx="12" cy="12" r="4.1" />
+    <circle cx="17.45" cy="6.7" r="1.1" fill="currentColor" stroke="none" />
   </svg>
 );
 
 const YouTubeLogo = () => (
-  <svg aria-hidden="true" viewBox="0 0 32 32" className="h-8 w-8">
-    <rect x="3" y="7" width="26" height="18" rx="5.3" fill="#FF0033" />
-    <path d="M13 11.5v9l8-4.5-8-4.5Z" fill="#FFFFFF" />
+  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+    <path fillRule="evenodd" d="M6.2 5h11.6A4.2 4.2 0 0 1 22 9.2v5.6a4.2 4.2 0 0 1-4.2 4.2H6.2A4.2 4.2 0 0 1 2 14.8V9.2A4.2 4.2 0 0 1 6.2 5Zm3.8 3.6v6.8l6-3.4-6-3.4Z" />
   </svg>
 );
 
 const LinkedInLogo = () => (
-  <svg aria-hidden="true" viewBox="0 0 32 32" className="h-8 w-8">
-    <rect x="2" y="2" width="28" height="28" rx="3" fill="#0A66C2" />
-    <text x="16" y="23" textAnchor="middle" fill="#FFFFFF" fontFamily="Arial, Helvetica, sans-serif" fontSize="18" fontWeight="700" letterSpacing="-1.3">in</text>
+  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 6v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-3.95v-11Z" />
   </svg>
 );
 
