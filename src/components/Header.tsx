@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 import logoIcon from "@/assets/logo-icon.png";
 import logoText from "@/assets/logo-text.png";
@@ -57,7 +58,8 @@ const Header = () => {
         >
           <span className="flex items-center gap-3">{logoImages}</span>
           <span
-            className={`self-stretch text-center font-sans text-[11px] tracking-[0.08em] text-white/60 transition-all duration-300 overflow-hidden ${
+            translate="no"
+            className={`notranslate self-stretch text-center font-sans text-[11px] tracking-[0.08em] text-white/60 transition-all duration-300 overflow-hidden ${
               solid ? "max-h-0 opacity-0" : "max-h-5 opacity-100"
             }`}
           >
@@ -162,6 +164,8 @@ const Header = () => {
             FAQ
           </Link>
 
+          <LanguageSwitcher className="-mr-2" />
+
           <a
             href={isHomePage ? "/#contato" : "/#contato"}
             className="text-sm border border-[#FE731A] text-white hover:bg-[#FE731A] px-5 py-2 rounded-sm transition-colors font-medium tracking-wide"
@@ -184,6 +188,7 @@ const Header = () => {
       {open && (
         <nav className="md:hidden bg-[#16181D]/95 backdrop-blur-md border-t border-white/10 py-6">
           <div className="container flex flex-col gap-4">
+            <LanguageSwitcher className="pb-4 mb-1 border-b border-white/10" />
             <p className="section-kicker">Serviços</p>
             <Link
               to="/servicos/programacao-cam"

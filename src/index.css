@@ -203,3 +203,23 @@ html, body {
     linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12) 20%, rgba(254, 115, 26, 0.35) 50%, rgba(255, 255, 255, 0.12) 80%, transparent) top / 100% 1px no-repeat,
     radial-gradient(ellipse 40% 60% at 50% 60%, rgba(254, 115, 26, 0.18), transparent 70%);
 }
+
+/* Tradutor automático: esconde a barra e os balões do Google, mantém o visual do site */
+#google_translate_element,
+iframe.skiptranslate,
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-yAWNEb-L7lbkb {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+.goog-text-highlight,
+font[style] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

@@ -15,7 +15,7 @@ const TechStrip = () => (
             <dt className="section-kicker mb-4">{g.label}</dt>
             <dd className="flex flex-wrap gap-x-4 gap-y-2">
               {g.items.map((item) => (
-                <span key={item} className="font-mono text-sm tracking-wide text-white/75">
+                <span key={item} translate="no" className="notranslate font-mono text-sm tracking-wide text-white/75">
                   {item}
                 </span>
               ))}
