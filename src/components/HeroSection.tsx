@@ -4,10 +4,22 @@ import { useLang, tr } from "@/lib/useLang";
 import { ArrowDown, FileText } from "lucide-react";
 
 const metrics = [
-  { value: "7h → 3h", label: "Rotor macho · ciclo −57%" },
-  { value: "4h → 2,5h", label: "Estampo P20 · ciclo −37,5%" },
-  { value: "3-4-5 eixos", label: "Posicionado e simultâneo" },
-  { value: "NX · hyperMILL", label: "Programação e pós-processadores" },
+  {
+    value: { pt: "7h → 3h", en: "7h → 3h", de: "7 h → 3 h", it: "7 h → 3 h" },
+    label: { pt: "Rotor macho · ciclo −57%", en: "Male rotor · cycle time −57%", de: "Hauptläufer · Zykluszeit −57 %", it: "Rotore maschio · tempo ciclo −57%" },
+  },
+  {
+    value: { pt: "4h → 2,5h", en: "4h → 2.5h", de: "4 h → 2,5 h", it: "4 h → 2,5 h" },
+    label: { pt: "Estampo P20 · ciclo −37,5%", en: "P20 stamping die · cycle time −37.5%", de: "Stanzwerkzeug P20 · Zykluszeit −37,5 %", it: "Stampo P20 · tempo ciclo −37,5%" },
+  },
+  {
+    value: { pt: "3-4-5 eixos", en: "3-4-5 axis", de: "3-4-5 Achsen", it: "3-4-5 assi" },
+    label: { pt: "Posicionado e simultâneo", en: "Indexed and simultaneous", de: "Angestellt und simultan", it: "Posizionato e simultaneo" },
+  },
+  {
+    value: { pt: "NX · hyperMILL", en: "NX · hyperMILL", de: "NX · hyperMILL", it: "NX · hyperMILL" },
+    label: { pt: "Programação e pós-processadores", en: "Programming and post-processors", de: "Programmierung und Postprozessoren", it: "Programmazione e post-processori" },
+  },
 ];
 
 const HeroSection = () => {
