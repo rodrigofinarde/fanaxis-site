@@ -154,7 +154,7 @@ const Sobre = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="group bg-card border border-white/10 p-8 text-center transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
-                <Target className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} strokeWidth={1.5} />
+                <Target className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Missão</h3>
                 <p className="text-sm text-white/55 leading-relaxed">
                   Democratizar o acesso à tecnologia CAD/CAM/CNC de ponta, levando soluções de
@@ -163,7 +163,7 @@ const Sobre = () => {
               </div>
 
               <div className="group bg-card border border-white/10 p-8 text-center transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
-                <Eye className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} strokeWidth={1.5} />
+                <Eye className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Visão</h3>
                 <p className="text-sm text-white/55 leading-relaxed">
                   Ser referência nacional em programação CAM e digitalização de processos de
@@ -172,7 +172,7 @@ const Sobre = () => {
               </div>
 
               <div className="group bg-card border border-white/10 p-8 text-center transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
-                <Heart className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} strokeWidth={1.5} />
+                <Heart className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Valores</h3>
                 <p className="text-sm text-white/55 leading-relaxed">
                   Excelência técnica, inovação contínua, resultado mensurável para o cliente,
