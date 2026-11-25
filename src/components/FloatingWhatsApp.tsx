@@ -17,7 +17,7 @@ const FloatingWhatsApp = () => (
         className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-[#25D366] ring-2 ring-[#0A0A0A] group-hover:ring-[#FE731A]"
       />
     </span>
-    <span className="hidden sm:inline text-sm font-medium tracking-wide">WhatsApp</span>
+    <span translate="no" className="notranslate hidden sm:inline text-sm font-medium tracking-wide">WhatsApp</span>
   </a>
 );
 

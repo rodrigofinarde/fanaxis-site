@@ -69,7 +69,7 @@ const CycleBar = ({ before, after }: { before: number; after: number }) => {
         <div className="flex-1 h-2.5 bg-white/5">
           <div className="h-full bg-white/30 w-full" />
         </div>
-        <span className="w-10 text-right text-white/60 tabular-nums">{fmt(before)}</span>
+        <span translate="no" className="notranslate w-10 text-right text-white/60 tabular-nums">{fmt(before)}</span>
       </div>
       <div className="flex items-center gap-3">
         <span className="w-14 text-[#FE731A] uppercase tracking-wider">Depois</span>
@@ -79,7 +79,7 @@ const CycleBar = ({ before, after }: { before: number; after: number }) => {
             style={{ width: on ? `${pct}%` : "100%" }}
           />
         </div>
-        <span className="w-10 text-right text-[#FE731A] tabular-nums">{fmt(after)}</span>
+        <span translate="no" className="notranslate w-10 text-right text-[#FE731A] tabular-nums">{fmt(after)}</span>
       </div>
     </div>
   );
@@ -173,7 +173,10 @@ const ProjectsSection = () => {
                     <CycleBar before={p.before} after={p.after} />
                   </div>
                 ) : (
-                  <p className="font-mono text-sm tabular-nums text-primary font-medium mb-3">{p.metric}</p>
+                  <p className="font-mono text-sm tabular-nums text-primary font-medium mb-3">
+                    {p.metric.split(": ")[0]}:{" "}
+                    <span translate="no" className="notranslate">{p.metric.split(": ")[1]}</span>
+                  </p>
                 )}
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {p.description}

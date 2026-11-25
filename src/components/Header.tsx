@@ -2,6 +2,19 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useLang, tr } from "@/lib/useLang";
+
+const L = {
+  services: { pt: "Serviços", en: "Services", de: "Leistungen", it: "Servizi" },
+  cam: { pt: "Programação CAD/CAM/CNC", en: "CAD/CAM/CNC Programming", de: "CAD/CAM/CNC-Programmierung", it: "Programmazione CAD/CAM/CNC" },
+  twin: { pt: "Gêmeo Digital CNC", en: "CNC Digital Twin", de: "Digitaler Zwilling CNC", it: "Gemello digitale CNC" },
+  consult: { pt: "Consultoria em Usinagem", en: "Machining Consulting", de: "Zerspanungsberatung", it: "Consulenza di lavorazione" },
+  digital: { pt: "Digitalização de Processos", en: "Process Digitalization", de: "Prozessdigitalisierung", it: "Digitalizzazione dei processi" },
+  projects: { pt: "Projetos", en: "Projects", de: "Projekte", it: "Progetti" },
+  methods: { pt: "Métodos", en: "Methods", de: "Methoden", it: "Metodi" },
+  about: { pt: "Sobre", en: "About", de: "Über uns", it: "Chi siamo" },
+  contact: { pt: "Contato", en: "Contact", de: "Kontakt", it: "Contatti" },
+};
 
 import logoIcon from "@/assets/logo-icon.png";
 import logoText from "@/assets/logo-text.png";
@@ -10,6 +23,8 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
+  const lang = useLang();
+  const t = (k: keyof typeof L) => tr(lang, L[k]);
 
   const isHomePage = location.pathname === "/";
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +57,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      translate="no"
+      className={`notranslate fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         solid
           ? "bg-[#16181D]/85 backdrop-blur-md border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
           : "bg-transparent border-b border-transparent"
@@ -77,7 +93,7 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              Serviços
+              {t("services")}
               <ChevronDown className="w-3 h-3" />
             </button>
             {servicesOpen && (
@@ -92,28 +108,28 @@ const Header = () => {
                   className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
-                  Programação CAD/CAM/CNC
+                  {t("cam")}
                 </Link>
                 <Link
                   to="/servicos/gemeo-digital"
                   className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
-                  Gêmeo Digital CNC
+                  {t("twin")}
                 </Link>
                 <Link
                   to="/servicos/consultoria-usinagem"
                   className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
-                  Consultoria em Usinagem
+                  {t("consult")}
                 </Link>
                 <Link
                   to="/servicos/digitalizacao-processos"
                   className="block px-4 py-2.5 text-sm text-white/65 hover:text-white hover:bg-white/5 border-l-2 border-transparent hover:border-[#FE731A] transition-colors"
                   onClick={() => setServicesOpen(false)}
                 >
-                  Digitalização de Processos
+                  {t("digital")}
                 </Link>
                 </div>
               </div>
@@ -121,8 +137,8 @@ const Header = () => {
           </div>
 
           {[
-            ["Projetos", isHomePage ? "/#projetos" : "/#projetos"],
-            ["Métodos", isHomePage ? "/#metodos" : "/#metodos"],
+            [t("projects"), "/#projetos"],
+            [t("methods"), "/#metodos"],
           ].map(([label, href]) => (
             href.startsWith("/#") ? (
               <a
@@ -147,7 +163,7 @@ const Header = () => {
             to="/sobre"
             className="nav-link text-sm text-white/70 hover:text-white transition-colors"
           >
-            Sobre
+            {t("about")}
           </Link>
 
           <Link
@@ -170,7 +186,7 @@ const Header = () => {
             href={isHomePage ? "/#contato" : "/#contato"}
             className="text-sm border border-[#FE731A] text-white hover:bg-[#FE731A] px-5 py-2 rounded-sm transition-colors font-medium tracking-wide"
           >
-            Contato
+            {t("contact")}
           </a>
         </nav>
 
@@ -189,34 +205,34 @@ const Header = () => {
         <nav className="md:hidden bg-[#16181D]/95 backdrop-blur-md border-t border-white/10 py-6">
           <div className="container flex flex-col gap-4">
             <LanguageSwitcher className="pb-4 mb-1 border-b border-white/10" />
-            <p className="section-kicker">Serviços</p>
+            <p className="section-kicker">{t("services")}</p>
             <Link
               to="/servicos/programacao-cam"
               onClick={() => setOpen(false)}
               className="text-sm text-white/70 hover:text-white pl-2"
             >
-              Programação CAD/CAM/CNC
+              {t("cam")}
             </Link>
             <Link
               to="/servicos/gemeo-digital"
               onClick={() => setOpen(false)}
               className="text-sm text-white/70 hover:text-white pl-2"
             >
-              Gêmeo Digital CNC
+              {t("twin")}
             </Link>
             <Link
               to="/servicos/consultoria-usinagem"
               onClick={() => setOpen(false)}
               className="text-sm text-white/70 hover:text-white pl-2"
             >
-              Consultoria em Usinagem
+              {t("consult")}
             </Link>
             <Link
               to="/servicos/digitalizacao-processos"
               onClick={() => setOpen(false)}
               className="text-sm text-white/70 hover:text-white pl-2"
             >
-              Digitalização de Processos
+              {t("digital")}
             </Link>
 
             <Link
@@ -224,21 +240,21 @@ const Header = () => {
               onClick={() => { setOpen(false); setTimeout(() => window.scrollTo({ top: document.getElementById('projetos')?.offsetTop ?? 0, behavior: 'smooth' }), 100); }}
               className="text-sm text-white/70 hover:text-white"
             >
-              Projetos
+              {t("projects")}
             </Link>
             <Link
               to="/"
               onClick={() => { setOpen(false); setTimeout(() => window.scrollTo({ top: document.getElementById('metodos')?.offsetTop ?? 0, behavior: 'smooth' }), 100); }}
               className="text-sm text-white/70 hover:text-white"
             >
-              Métodos
+              {t("methods")}
             </Link>
             <Link
               to="/sobre"
               onClick={() => setOpen(false)}
               className="text-sm text-white/70 hover:text-white"
             >
-              Sobre
+              {t("about")}
             </Link>
             <Link
               to="/blog"
@@ -259,7 +275,7 @@ const Header = () => {
               onClick={() => setOpen(false)}
               className="text-sm bg-[#FE731A] hover:bg-[#E5620F] text-white px-4 py-2 rounded-sm text-center"
             >
-              Contato
+              {t("contact")}
             </Link>
           </div>
         </nav>

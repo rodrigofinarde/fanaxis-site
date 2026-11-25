@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CadCorners from "./CadCorners";
+import { useLang, tr } from "@/lib/useLang";
 import { ArrowDown, FileText } from "lucide-react";
 
 const metrics = [
@@ -10,6 +11,7 @@ const metrics = [
 ];
 
 const HeroSection = () => {
+  const lang = useLang();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [reduceMotion, setReduceMotion] = useState(false);
 
@@ -99,12 +101,12 @@ const HeroSection = () => {
         {/* Números com linha de cota */}
         <div className="mt-14 md:mt-16 border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
           {metrics.map((m) => (
-            <div key={m.label} className="relative pl-4">
+            <div key={m.label.pt} translate="no" className="notranslate relative pl-4">
               <span aria-hidden="true" className="absolute left-0 top-1 bottom-1 w-px bg-[#FE731A]/60" />
               <p className="font-display text-2xl md:text-3xl xl:text-4xl leading-tight tabular-nums text-[#FE731A]">
-                {m.value}
+                {tr(lang, m.value)}
               </p>
-              <p className="text-sm text-white/60 mt-1">{m.label}</p>
+              <p className="text-sm text-white/60 mt-1">{tr(lang, m.label)}</p>
             </div>
           ))}
         </div>

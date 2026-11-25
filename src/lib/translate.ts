@@ -95,6 +95,7 @@ export async function setLanguage(lang: Lang): Promise<void> {
   }
 
   writeCookie(`/pt/${lang}`);
+  window.dispatchEvent(new Event("fx-lang"));
   try {
     await loadGoogle();
     const combo = await waitForCombo();

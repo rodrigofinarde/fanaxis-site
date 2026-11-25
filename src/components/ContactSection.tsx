@@ -86,7 +86,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">WhatsApp</label>
+                  <label className="block text-sm font-medium text-foreground mb-1.5"><span translate="no" className="notranslate">WhatsApp</span></label>
                   <input
                     type="tel"
                     name="whatsapp"
