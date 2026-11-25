@@ -68,7 +68,7 @@ const Sobre = () => {
               </h2>
               <p className="text-white/70 leading-relaxed mb-4">
                 A Fanaxis nasceu da experiência prática de Rodrigo Finarde no chão de fábrica.
-                Com passagem pela B. GROB do Brasil — referência mundial em centros de usinagem
+                Programador CNC na B. GROB do Brasil — referência mundial em centros de usinagem
                 5 eixos — Rodrigo acumula mais de 20 anos atuando diretamente com programação CAM,
                 otimização de processos e treinamento técnico.
               </p>
@@ -111,8 +111,9 @@ const Sobre = () => {
                   </div>
                 </div>
                 <p className="text-white/70 leading-relaxed mb-3">
-                  Mais de 20 anos de experiência em usinagem CNC, com passagem pela B. GROB do Brasil,
-                  onde atuou com máquinas de alto padrão e processos industriais exigentes.
+                  Mais de 20 anos de experiência em usinagem CNC. Atua como programador CNC na
+                  B. GROB do Brasil, referência mundial em centros de usinagem 5 eixos, trabalhando
+                  com máquinas de alto padrão e processos industriais exigentes.
                 </p>
                 <p className="text-white/70 leading-relaxed mb-4">
                   Especialista em programação CAM para fresamento 3, 4 e 5 eixos simultâneos em
