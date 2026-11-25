@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import fotoRodrigo from "@/assets/rodrigo-finarde.webp";
 import { Target, Eye, Heart, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -87,13 +88,28 @@ const Sobre = () => {
               <h2 className="text-2xl md:text-3xl mb-6">
                 Sobre o fundador
               </h2>
-              <div className="bg-card border border-white/10 p-6 mb-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  Rodrigo Finarde
-                </h3>
-                <p className="text-[#FE731A] text-sm mb-4">
-                  Fundador & Especialista CAD/CAM/CNC
-                </p>
+              <div className="bg-card border border-white/10 p-6 md:p-8 mb-6">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-6">
+                  <div className="relative shrink-0 w-36 h-36 md:w-44 md:h-44">
+                    <div aria-hidden="true" className="absolute -inset-3 rounded-full bg-[#FE731A]/20 blur-2xl" />
+                    <img
+                      src={fotoRodrigo}
+                      alt="Rodrigo Finarde, fundador da Fanaxis"
+                      width={176}
+                      height={176}
+                      loading="lazy"
+                      className="relative w-full h-full rounded-full object-cover ring-2 ring-[#FE731A] ring-offset-4 ring-offset-[hsl(var(--card))]"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      Rodrigo Finarde
+                    </h3>
+                    <p className="font-mono text-xs tracking-[0.18em] uppercase text-[#FE731A]">
+                      Fundador · Especialista CAD/CAM/CNC
+                    </p>
+                  </div>
+                </div>
                 <p className="text-white/70 leading-relaxed mb-3">
                   Mais de 20 anos de experiência em usinagem CNC, com passagem pela B. GROB do Brasil,
                   onde atuou com máquinas de alto padrão e processos industriais exigentes.
