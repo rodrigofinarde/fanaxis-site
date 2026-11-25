@@ -3,6 +3,7 @@ import { renishawProbingPost } from "./renishawProbingPost";
 import { sinumerikOnePost } from "./sinumerikOnePost";
 import { barrelToolsPost } from "./barrelToolsPost";
 import { fixationDigitalTwinPost } from "./fixationDigitalTwinPost";
+import { gemeosDigitaisPost } from "./gemeosDigitaisPost";
 
 export interface BlogPost {
   slug: string;
@@ -22,6 +23,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  gemeosDigitaisPost,
   fixationDigitalTwinPost,
   barrelToolsPost,
   sinumerikOnePost,
@@ -377,54 +379,6 @@ export const blogPosts: BlogPost[] = [
       <h2>Por Onde Começar?</h2>
       <p>Se sua empresa ainda depende de processos manuais e programação na máquina, o primeiro passo é migrar para uma programação CAM offline. Em seguida, implementar simulações e, gradualmente, adotar gêmeos digitais para validação completa.</p>
       <p>A Fanaxis pode te ajudar em cada etapa desse processo, desde a consultoria inicial até a implementação completa da digitalização na sua produção.</p>
-    `,
-  },
-  {
-    slug: "o-que-e-gemeo-digital-usinagem-cnc",
-    title: "O Que é um Gêmeo Digital na Usinagem CNC?",
-    excerpt:
-      "Entenda de forma simples o que é um gêmeo digital, como ele funciona na usinagem CNC e por que sua empresa deveria considerar essa tecnologia.",
-    category: "Gêmeo Digital",
-    date: "05 Mai 2026",
-    readTime: 4,
-    coverImage: "/blog/gemeo-digital-cover.webp",
-    content: `
-      <p>Você já imaginou poder testar toda uma operação de usinagem no computador antes de ligar a máquina? É exatamente isso que um <strong>gêmeo digital</strong> permite fazer.</p>
-
-      <h2>Explicação Simples</h2>
-      <p>Um gêmeo digital é uma cópia virtual da sua máquina CNC. Essa cópia inclui todos os movimentos dos eixos, as ferramentas, a peça bruta e as fixações. Tudo funciona exatamente como na máquina real, mas no computador.</p>
-      <p>Pense assim: é como um videogame da sua máquina. Você roda o programa CNC nesse "videogame" e vê exatamente o que vai acontecer na vida real, sem gastar material, sem risco de colisão e sem tempo de máquina.</p>
-
-      <h2>Como Funciona na Prática?</h2>
-      <p>O processo é simples:</p>
-      <ul>
-        <li>Você programa a peça no software CAM (como NX, Hypermill, Mastercam)</li>
-        <li>O programa gerado é carregado no gêmeo digital</li>
-        <li>A simulação roda mostrando todos os movimentos da máquina</li>
-        <li>Se houver algum problema (colisão, erro de programa), você corrige antes de ir para a máquina</li>
-        <li>Só depois de validado, o programa vai para a máquina real</li>
-      </ul>
-
-      <h2>Benefícios Reais</h2>
-      <p>Empresas que usam gêmeos digitais reportam:</p>
-      <ul>
-        <li><strong>Redução de 80%</strong> no tempo de tryout de novos programas</li>
-        <li><strong>Eliminação quase total</strong> de colisões na máquina</li>
-        <li><strong>Aumento de confiança</strong> dos operadores ao rodar programas novos</li>
-        <li><strong>Redução de refugo</strong> por erros de programação</li>
-      </ul>
-
-      <h2>Softwares Mais Usados</h2>
-      <p>Os principais softwares que oferecem gêmeos digitais para usinagem CNC são:</p>
-      <ul>
-        <li><strong>Siemens NX</strong> — Simulação completa com cinemática real da máquina</li>
-        <li><strong>Hypermill</strong> — Virtual Machining com detecção de colisão</li>
-        <li><strong>Vericut</strong> — Especialista em verificação e otimização de programas CNC</li>
-      </ul>
-
-      <h2>Vale a Pena para Minha Empresa?</h2>
-      <p>Se você trabalha com peças complexas, máquinas 5 eixos ou produção de alto valor agregado, a resposta é sim. O investimento se paga rapidamente com a redução de erros e aumento de produtividade.</p>
-      <p>A Fanaxis oferece consultoria especializada para implementação de gêmeos digitais na sua operação. Entre em contato e descubra como podemos ajudar.</p>
     `,
   },
   {

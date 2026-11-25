@@ -8,13 +8,14 @@ const GemeoDigital = () => {
   return (
     <>
       <Helmet>
-        <title>Gêmeo Digital CNC | Fanaxis - Simulação e Digitalização de Máquinas</title>
+        <title>Gêmeos Digitais para Usinagem CNC | FANAXIS</title>
         <link rel="canonical" href="https://www.fanaxis.com.br/servicos/gemeo-digital" />
-        <meta name="description" content="Gêmeo digital CNC: simulação completa da máquina, detecção de colisões e validação de programas antes da usinagem. NX CAM Machine Kits e simulação virtual. Fale com a Fanaxis." />
+        <meta name="description" content="Gêmeos digitais de máquinas CNC: réplica virtual com cinemática, comando e pós-processador reais para validar programas antes da usinagem. Casos reais: ciclo de 7 h para 3 h. NX CAM, hyperMILL e Vericut." />
+        <meta name="keywords" content="gêmeos digitais, gêmeo digital, gêmeos digitais usinagem, gêmeo digital CNC, gêmeo digital máquina CNC, simulação de máquina, machine kit NX CAM, Vericut" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Gêmeo Digital CNC | Fanaxis" />
-        <meta property="og:description" content="Gêmeo digital CNC: simulação completa da máquina, detecção de colisões e validação de programas antes da usinagem." />
+        <meta property="og:title" content="Gêmeos Digitais para Usinagem CNC | FANAXIS" />
+        <meta property="og:description" content="Gêmeos digitais de máquinas CNC para validar programas antes da usinagem. Casos reais: 7 h → 3 h e 4 h → 2,5 h." />
         <meta property="og:image" content="https://www.fanaxis.com.br/og-fanaxis.jpg" />
         <meta property="og:url" content="https://www.fanaxis.com.br/servicos/gemeo-digital" />
         <meta property="og:type" content="website" />
@@ -23,8 +24,9 @@ const GemeoDigital = () => {
         <script type="application/ld+json">{`{
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "Gêmeo Digital CNC",
-          "description": "Criação de gêmeos digitais de máquinas CNC para simulação completa, detecção de colisões, validação de programas e otimização de processos de usinagem. NX CAM Machine Kits, Vericut e simulação virtual.",
+          "name": "Gêmeos digitais para usinagem CNC",
+          "serviceType": "Gêmeo digital de máquina CNC",
+          "description": "Criação de gêmeos digitais de máquinas CNC para simulação completa, detecção de colisões, validação de programas e otimização de processos de usinagem. NX CAM Machine Kits, hyperMILL, Vericut e simulação do código NC pós-processado.",
           "url": "https://www.fanaxis.com.br/servicos/gemeo-digital",
           "provider": {
             "@type": "Organization",
@@ -32,7 +34,7 @@ const GemeoDigital = () => {
             "url": "https://www.fanaxis.com.br",
             "logo": "https://www.fanaxis.com.br/og-fanaxis.jpg"
           },
-          "areaServed": "BR",
+          "areaServed": { "@type": "Country", "name": "Brasil" },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Gêmeo Digital CNC",
@@ -61,6 +63,52 @@ const GemeoDigital = () => {
             ]
           }
         }`}</script>
+        <script type="application/ld+json">{`{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que são gêmeos digitais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gêmeos digitais são réplicas virtuais de algo físico que se comportam como o original. Na usinagem CNC, o gêmeo digital da máquina reproduz geometria, cinemática, cursos, comando e pós-processador, permitindo validar programas no computador com resultado igual ao da máquina real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gêmeo digital é o mesmo que a simulação do software CAM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A simulação comum do CAM mostra a trajetória da ferramenta. O gêmeo digital simula o código NC pós-processado na máquina virtual completa, que é o que revela colisões com cabeçote e mesa, fins de curso e erros de pós-processador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais máquinas e comandos podem ter um gêmeo digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Centros de usinagem de 3, 4 e 5 eixos e tornos, inclusive máquinas mais antigas. Os comandos mais comuns são Siemens Sinumerik, Heidenhain e Fanuc. Já trabalhamos com máquinas Hermle, DMG MORI, Grob, Mazak e Okuma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso trocar meu software CAM para usar gêmeos digitais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não necessariamente. Trabalhamos com NX CAM (Machine Kits) e hyperMILL, e o Vericut verifica programas de qualquer CAM. A solução é definida a partir do que a empresa já usa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais resultados um gêmeo digital pode trazer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Além de evitar colisões, ele permite otimizar o processo com segurança antes de ocupar a máquina. Em projetos reais da FANAXIS, o ciclo de um rotor macho caiu de 7 h para 3 h e o de uma ferramenta de estampo em P20, de 4 h para 2,5 h."
+      }
+    }
+  ]
+}`}</script>
       </Helmet>
       <div className="bg-background text-white min-h-screen">
         <Header />
@@ -71,12 +119,12 @@ const GemeoDigital = () => {
             Serviços
           </p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.02]">
-            Gêmeo <span className="text-[#FE731A]">Digital</span> CNC
+            Gêmeos <span className="text-[#FE731A]">digitais</span> para usinagem CNC
           </h1>
           <p className="text-lg text-white/70 mb-8 max-w-3xl leading-relaxed">
-            Criação de gêmeos digitais de máquinas CNC para simulação completa, detecção de colisões
-            e validação de programas antes da usinagem real. Utilizamos Machine Kits no NX CAM,
-            Vericut e ferramentas de simulação virtual para eliminar riscos e otimizar processos.
+            Criamos gêmeos digitais de máquinas CNC: a réplica virtual da sua máquina, com cinemática,
+            cursos, comando e pós-processador reais. Cada programa é validado no computador antes de
+            chegar ao chão de fábrica. Machine Kits no NX CAM, simulação no hyperMILL e verificação no Vericut.
           </p>
 
           <a
@@ -95,7 +143,7 @@ const GemeoDigital = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl md:text-3xl mb-6">
-                O que é um gêmeo digital CNC?
+                O que são gêmeos digitais na usinagem CNC?
               </h2>
               <p className="text-white/70 leading-relaxed mb-4">
                 Um gêmeo digital CNC é uma réplica virtual fiel da sua máquina-ferramenta, incluindo
@@ -107,6 +155,13 @@ const GemeoDigital = () => {
                 A Fanaxis configura Machine Kits no NX CAM e integra soluções como o Vericut para
                 criar gêmeos digitais de alta fidelidade de máquinas 5 eixos como Hermle, DMG Mori,
                 Grob, Mazak e Okuma.
+              </p>
+              <p className="text-white/70 leading-relaxed">
+                Quer entender o conceito em detalhe?{" "}
+                <Link to="/blog/o-que-e-gemeo-digital-usinagem-cnc" className="text-[#FE731A] underline underline-offset-4 hover:text-white">
+                  Leia o guia completo sobre gêmeos digitais na usinagem CNC
+                </Link>
+                .
               </p>
             </div>
 
@@ -144,7 +199,7 @@ const GemeoDigital = () => {
         <section className="relative bg-secondary py-24 md:py-28">
           <div className="container">
             <h2 className="text-2xl md:text-3xl mb-12 text-center">
-              Benefícios do gêmeo digital CNC
+              Benefícios dos gêmeos digitais na usinagem
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -166,7 +221,7 @@ const GemeoDigital = () => {
                 },
                 {
                   title: "Integração Vericut",
-                  desc: "Configuração e integração do Vericut para simulação avançada com verificação de corte (CAV) e otimização automática.",
+                  desc: "Configuração e integração do Vericut para verificação independente do código G, com detecção de colisões e comparação com o modelo.",
                 },
                 {
                   title: "Máquinas atendidas",
@@ -182,13 +237,80 @@ const GemeoDigital = () => {
           </div>
         </section>
 
+        {/* Como construímos */}
+        <section className="container py-24 md:py-28">
+          <p className="section-kicker mb-4">Processo</p>
+          <h2 className="text-2xl md:text-3xl mb-12">Como criamos o gêmeo digital da sua máquina</h2>
+          <ol className="grid md:grid-cols-5 gap-6">
+            {[
+                { t: "Levantamento", d: "Modelo, eixos, cursos, comando, opcionais e o padrão de programa da sua empresa." },
+                { t: "Modelagem e cinemática", d: "Montagem 3D dos componentes e cadeia cinemática com os centros de rotação corretos." },
+                { t: "Pós-processador", d: "O mesmo código simulado é o código que vai para a máquina." },
+                { t: "Ferramentas e fixações", d: "Porta-ferramentas, ferramentas e dispositivos como estão no chão de fábrica." },
+                { t: "Validação na máquina real", d: "Programas de teste controlados confirmam que máquina virtual e física se comportam igual." }
+            ].map((s, i) => (
+              <li key={s.t} className="border-t border-white/15 pt-5">
+                <span className="font-mono text-xs text-[#FE731A] tracking-wider">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="font-semibold text-white mt-2 mb-2">{s.t}</h3>
+                <p className="text-sm text-white/55 leading-relaxed">{s.d}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Resultados reais */}
+        <section className="relative bg-secondary py-20 md:py-24">
+          <div className="container grid md:grid-cols-[1fr_2fr] gap-10 items-center">
+            <div>
+              <p className="section-kicker mb-4">Resultados reais</p>
+              <h2 className="text-2xl md:text-3xl">Do gêmeo digital ao chão de fábrica</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="bg-card border border-white/10 p-6">
+                <p translate="no" className="notranslate font-display text-3xl text-[#FE731A]">7h → 3h</p>
+                <p className="text-sm text-white/60 mt-2">Rotor macho · desbaste em 4 eixos simultâneos validado na simulação · ciclo −57%</p>
+              </div>
+              <div className="bg-card border border-white/10 p-6">
+                <p translate="no" className="notranslate font-display text-3xl text-[#FE731A]">4h → 2,5h</p>
+                <p className="text-sm text-white/60 mt-2">Ferramenta de estampo em P20 · reprogramada e simulada no NX CAM · ciclo −37,5%</p>
+              </div>
+              <Link to="/#projetos" className="sm:col-span-2 text-sm text-[#FE731A] hover:text-white inline-flex items-center gap-2">
+                Ver os vídeos dos casos <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Perguntas frequentes */}
+        <section className="container py-24 md:py-28 max-w-4xl">
+          <p className="section-kicker mb-4">Perguntas frequentes</p>
+          <h2 className="text-2xl md:text-3xl mb-10">Gêmeos digitais: dúvidas comuns</h2>
+          <div className="divide-y divide-white/10 border-y border-white/10">
+            {[
+                { q: "O que são gêmeos digitais?", a: "Gêmeos digitais são réplicas virtuais de algo físico que se comportam como o original. Na usinagem CNC, o gêmeo digital da máquina reproduz geometria, cinemática, cursos, comando e pós-processador, permitindo validar programas no computador com resultado igual ao da máquina real." },
+                { q: "Gêmeo digital é o mesmo que a simulação do software CAM?", a: "Não. A simulação comum do CAM mostra a trajetória da ferramenta. O gêmeo digital simula o código NC pós-processado na máquina virtual completa, que é o que revela colisões com cabeçote e mesa, fins de curso e erros de pós-processador." },
+                { q: "Quais máquinas e comandos podem ter um gêmeo digital?", a: "Centros de usinagem de 3, 4 e 5 eixos e tornos, inclusive máquinas mais antigas. Os comandos mais comuns são Siemens Sinumerik, Heidenhain e Fanuc. Já trabalhamos com máquinas Hermle, DMG MORI, Grob, Mazak e Okuma." },
+                { q: "Preciso trocar meu software CAM para usar gêmeos digitais?", a: "Não necessariamente. Trabalhamos com NX CAM (Machine Kits) e hyperMILL, e o Vericut verifica programas de qualquer CAM. A solução é definida a partir do que a empresa já usa." },
+                { q: "Quais resultados um gêmeo digital pode trazer?", a: "Além de evitar colisões, ele permite otimizar o processo com segurança antes de ocupar a máquina. Em projetos reais da FANAXIS, o ciclo de um rotor macho caiu de 7 h para 3 h e o de uma ferramenta de estampo em P20, de 4 h para 2,5 h." }
+            ].map((f) => (
+              <details key={f.q} className="group py-5">
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-6 font-semibold text-white">
+                  {f.q}
+                  <span className="text-[#FE731A] transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+                </summary>
+                <p className="mt-3 text-white/65 leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* CTA Final */}
         <section className="page-cta container py-24 md:py-32 text-center">
           <h2 className="text-2xl md:text-3xl mb-4">
             Elimine riscos na sua usinagem
           </h2>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            A Fanaxis ajuda empresas a implementarem gêmeos digitais CNC para simulação segura
+            A Fanaxis ajuda empresas a implementarem gêmeos digitais de máquinas CNC para simulação segura
             e otimização de processos. Fale com nossos especialistas.
           </p>
           <Link
