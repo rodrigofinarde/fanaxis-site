@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CadCorners from "./CadCorners";
+import { useLang, tr } from "@/lib/useLang";
 import { Play } from "lucide-react";
 import rotorCover from "@/assets/rotor-case.jpg";
 import stampCover from "@/assets/estampo-p20-cover.jpg";
@@ -9,6 +10,7 @@ const projects = [
     image: rotorCover,
     video: "/assets/case-rotor-fanaxis.mp4",
     title: "Rotor macho | material 1045",
+    titleT: { pt: "Rotor macho | material 1045", en: "Male rotor | material 1045", de: "Hauptläufer | Werkstoff 1045", it: "Rotore maschio | materiale 1045" },
     badges: ["Reprogramação e otimização"],
     metric: "Tempo de ciclo: 7h → 3h (−57%)",
     before: 7,
@@ -86,6 +88,7 @@ const CycleBar = ({ before, after }: { before: number; after: number }) => {
 };
 
 const ProjectsSection = () => {
+  const lang = useLang();
   const [openedVideos, setOpenedVideos] = useState<Record<string, boolean>>({});
 
   return (
@@ -167,7 +170,9 @@ const ProjectsSection = () => {
                     <span key={b} className="font-mono text-[10px] tracking-wider uppercase px-2 py-1 border border-white/15 text-white/60">{b}</span>
                   ))}
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-4">{p.title}</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-4">
+                  {p.titleT ? <span translate="no" className="notranslate">{tr(lang, p.titleT)}</span> : p.title}
+                </h3>
                 {p.before && p.after ? (
                   <div className="mb-5">
                     <CycleBar before={p.before} after={p.after} />
