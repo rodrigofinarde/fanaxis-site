@@ -43,14 +43,14 @@ const Sobre = () => {
         <Header />
 
         {/* Hero */}
-        <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
+        <section className="page-hero container pt-36 pb-20 md:pb-28">
+          <p className="section-kicker mb-6">
             Quem somos
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.02]">
             Sobre a <span className="text-[#FE731A]">Fanaxis</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
+          <p className="text-lg text-white/70 mb-8 max-w-3xl leading-relaxed">
             A Fanaxis é uma empresa brasileira especializada em soluções avançadas de usinagem CNC,
             com foco em programação CAD/CAM, digitalização de processos, gêmeos digitais e
             consultoria técnica. Nossa missão é democratizar o acesso à tecnologia de ponta em
@@ -59,24 +59,24 @@ const Sobre = () => {
         </section>
 
         {/* História */}
-        <section className="container py-16 border-t border-white/10">
+        <section className="container py-20 md:py-24">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 Nossa história
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 A Fanaxis nasceu da experiência prática de Rodrigo Finarde no chão de fábrica.
                 Com passagem pela B. GROB do Brasil — referência mundial em centros de usinagem
                 5 eixos — Rodrigo acumula mais de 20 anos atuando diretamente com programação CAM,
                 otimização de processos e treinamento técnico.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 A Fanaxis foi fundada com o objetivo de levar para outras empresas o mesmo nível
                 de excelência técnica que existe nas grandes indústrias, mas de forma acessível
                 e personalizada para cada necessidade.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Hoje, a Fanaxis atende empresas de diversos setores — automotivo, aeronáutico,
                 moldes e matrizes, bens de capital — oferecendo soluções completas desde a
                 programação CAM até a digitalização completa dos processos de manufatura.
@@ -84,21 +84,21 @@ const Sobre = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 Sobre o fundador
               </h2>
-              <div className="bg-[#1a1a1a] border border-white/10 rounded-lg p-6 mb-6">
+              <div className="bg-card border border-white/10 p-6 mb-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Rodrigo Finarde
                 </h3>
                 <p className="text-[#FE731A] text-sm mb-4">
                   Fundador & Especialista CAD/CAM/CNC
                 </p>
-                <p className="text-gray-300 leading-relaxed mb-3">
+                <p className="text-white/70 leading-relaxed mb-3">
                   Mais de 20 anos de experiência em usinagem CNC, com passagem pela B. GROB do Brasil,
                   onde atuou com máquinas de alto padrão e processos industriais exigentes.
                 </p>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-white/70 leading-relaxed mb-4">
                   Especialista em programação CAM para fresamento 3, 4 e 5 eixos simultâneos em
                   NX CAM, PowerMill e HyperMILL. Experiência em desenvolvimento de pós-processadores
                   customizados e simulação de máquinas CNC.
@@ -113,14 +113,14 @@ const Sobre = () => {
                 </a>
               </div>
 
-              <div className="bg-[#1a1a1a] border border-white/10 rounded-lg p-6">
+              <div className="bg-card border border-white/10 p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
                   O slogan
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-3">
+                <p className="text-white/70 leading-relaxed mb-3">
                   "We <strong className="text-[#FE731A]">CAM</strong> go further"
                 </p>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/55">
                   Uma referência ao Computer Aided Manufacturing (CAM) e ao compromisso da Fanaxis
                   de ir além na busca por soluções inovadoras para a indústria.
                 </p>
@@ -130,34 +130,34 @@ const Sobre = () => {
         </section>
 
         {/* Missão, Visão e Valores */}
-        <section className="bg-[#1a1a1a] py-20">
+        <section className="relative bg-secondary py-24 md:py-28">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl mb-12 text-center">
               Missão, Visão e Valores
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-background/50 border border-white/10 rounded-lg p-8 text-center">
-                <Target className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
+              <div className="group bg-card border border-white/10 p-8 text-center transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
+                <Target className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Missão</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-sm text-white/55 leading-relaxed">
                   Democratizar o acesso à tecnologia CAD/CAM/CNC de ponta, levando soluções de
                   manufatura avançada para empresas de todos os portes.
                 </p>
               </div>
 
-              <div className="bg-background/50 border border-white/10 rounded-lg p-8 text-center">
-                <Eye className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
+              <div className="group bg-card border border-white/10 p-8 text-center transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
+                <Eye className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Visão</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-sm text-white/55 leading-relaxed">
                   Ser referência nacional em programação CAM e digitalização de processos de
                   usinagem, conectando a indústria brasileira às melhores tecnologias globais.
                 </p>
               </div>
 
-              <div className="bg-background/50 border border-white/10 rounded-lg p-8 text-center">
-                <Heart className="w-10 h-10 text-[#FE731A] mx-auto mb-4" strokeWidth={1.5} />
+              <div className="group bg-card border border-white/10 p-8 text-center transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
+                <Heart className="w-9 h-9 text-white/50 group-hover:text-[#FE731A] transition-colors mx-auto mb-5" strokeWidth={1.5} strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-white mb-3">Valores</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-sm text-white/55 leading-relaxed">
                   Excelência técnica, inovação contínua, resultado mensurável para o cliente,
                   transparência e compromisso com a evolução da indústria de manufatura.
                 </p>
@@ -167,17 +167,17 @@ const Sobre = () => {
         </section>
 
         {/* CTA */}
-        <section className="container py-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <section className="page-cta container py-24 md:py-32 text-center">
+          <h2 className="text-2xl md:text-3xl mb-4">
             Vamos conversar sobre sua necessidade?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-8 max-w-2xl mx-auto">
             A Fanaxis está pronta para ajudar sua empresa a alcançar novos níveis de produtividade
             e eficiência na usinagem CNC.
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Entrar em contato
             <ArrowRight className="w-4 h-4" />

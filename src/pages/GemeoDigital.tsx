@@ -66,14 +66,14 @@ const GemeoDigital = () => {
         <Header />
 
         {/* Hero */}
-        <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
+        <section className="page-hero container pt-36 pb-20 md:pb-28">
+          <p className="section-kicker mb-6">
             Serviços
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.02]">
             Gêmeo <span className="text-[#FE731A]">Digital</span> CNC
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
+          <p className="text-lg text-white/70 mb-8 max-w-3xl leading-relaxed">
             Criação de gêmeos digitais de máquinas CNC para simulação completa, detecção de colisões
             e validação de programas antes da usinagem real. Utilizamos Machine Kits no NX CAM,
             Vericut e ferramentas de simulação virtual para eliminar riscos e otimizar processos.
@@ -83,7 +83,7 @@ const GemeoDigital = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Solicitar análise técnica
             <ArrowRight className="w-4 h-4" />
@@ -91,19 +91,19 @@ const GemeoDigital = () => {
         </section>
 
         {/* Descrição detalhada */}
-        <section className="container py-16 border-t border-white/10">
+        <section className="container py-20 md:py-24">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 O que é um gêmeo digital CNC?
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 Um gêmeo digital CNC é uma réplica virtual fiel da sua máquina-ferramenta, incluindo
                 todos os componentes mecânicos, eixos, fusos, mesa e sistema de controle. Ele permite
                 simular programas CNC inteiros antes da usinagem real, detectando colisões, violações
                 de limites e erros de código G.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 A Fanaxis configura Machine Kits no NX CAM e integra soluções como o Vericut para
                 criar gêmeos digitais de alta fidelidade de máquinas 5 eixos como Hermle, DMG Mori,
                 Grob, Mazak e Okuma.
@@ -111,10 +111,10 @@ const GemeoDigital = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 Para quem é?
               </h2>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-white/70">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Fábricas que querem eliminar colisões e danos caros na máquina</span>
@@ -141,9 +141,9 @@ const GemeoDigital = () => {
         </section>
 
         {/* Benefícios */}
-        <section className="bg-[#1a1a1a] py-20">
+        <section className="relative bg-secondary py-24 md:py-28">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl mb-12 text-center">
               Benefícios do gêmeo digital CNC
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,9 +173,9 @@ const GemeoDigital = () => {
                   desc: "Experiência com Hermle, DMG Mori, Grob, Mazak, Okuma e outras máquinas 5 eixos de alto padrão.",
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-background/50 border border-white/10 rounded-lg p-6">
+                <div key={i} className="group bg-card border border-white/10 p-6 transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
                   <h3 className="font-semibold text-white mb-3">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-white/55 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -183,17 +183,17 @@ const GemeoDigital = () => {
         </section>
 
         {/* CTA Final */}
-        <section className="container py-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <section className="page-cta container py-24 md:py-32 text-center">
+          <h2 className="text-2xl md:text-3xl mb-4">
             Elimine riscos na sua usinagem
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-8 max-w-2xl mx-auto">
             A Fanaxis ajuda empresas a implementarem gêmeos digitais CNC para simulação segura
             e otimização de processos. Fale com nossos especialistas.
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Agendar demonstração
             <ArrowRight className="w-4 h-4" />

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Programacao5Eixos = () => {
   return (
@@ -38,40 +39,48 @@ const Programacao5Eixos = () => {
           }
         }`}</script>
       </Helmet>
-      <div className="bg-[#0f172a] text-white min-h-screen">
+      <div className="bg-background text-white min-h-screen">
       <Header />
 
-      <section className="container pt-32 pb-20">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="page-hero container pt-36 pb-20 md:pb-28">
+        <p className="section-kicker mb-6">Serviços</p>
+        <h1 className="text-5xl md:text-6xl uppercase mb-8 leading-[1.02]">
           Programação CNC 5 Eixos
         </h1>
 
-        <p className="text-lg text-gray-300 mb-8 max-w-3xl">
+        <p className="text-lg text-white/70 mb-8 max-w-3xl">
           Especialistas em programação CNC 5 eixos para peças complexas,
           redução de tempo de ciclo e aumento de produtividade na usinagem.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Benefícios</h2>
-        <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-2">
+        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-4xl">
+        <div className="bg-card border border-white/10 p-8">
+        <h2 className="text-2xl mb-5">Benefícios</h2>
+        <ul className="list-disc pl-5 marker:text-[#FE731A] text-white/70 space-y-2">
           <li>Redução de tempo de usinagem</li>
           <li>Melhor acabamento superficial</li>
           <li>Menos setups</li>
         </ul>
+        </div>
 
-        <h2 className="text-2xl font-semibold mb-4">Serviços</h2>
-        <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-2">
+        <div className="bg-card border border-white/10 p-8">
+        <h2 className="text-2xl mb-5">Serviços</h2>
+        <ul className="list-disc pl-5 marker:text-[#FE731A] text-white/70 space-y-2">
           <li>Programação 3+2 e simultâneo</li>
           <li>Otimização de processos</li>
           <li>Simulação completa</li>
         </ul>
+        </div>
+        </div>
 
         <a
           href="/#contato"
-          className="inline-block bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded font-medium"
+          className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
         >
           Solicitar análise técnica
         </a>
       </section>
+      <Footer />
     </div>
     </>
   );

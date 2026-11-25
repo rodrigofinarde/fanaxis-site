@@ -66,14 +66,14 @@ const ConsultoriaUsinagem = () => {
         <Header />
 
         {/* Hero */}
-        <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
+        <section className="page-hero container pt-36 pb-20 md:pb-28">
+          <p className="section-kicker mb-6">
             Serviços
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.02]">
             Consultoria em <span className="text-[#FE731A]">Usinagem CNC</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
+          <p className="text-lg text-white/70 mb-8 max-w-3xl leading-relaxed">
             Consultoria especializada em usinagem CNC com mais de 20 anos de experiência no chão
             de fábrica. Análise de processos, redução de tempo de ciclo, seleção de ferramentas,
             otimização de parâmetros de corte e treinamento técnico para sua equipe.
@@ -83,7 +83,7 @@ const ConsultoriaUsinagem = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Solicitar consultoria
             <ArrowRight className="w-4 h-4" />
@@ -91,33 +91,33 @@ const ConsultoriaUsinagem = () => {
         </section>
 
         {/* Descrição detalhada */}
-        <section className="container py-16 border-t border-white/10">
+        <section className="container py-20 md:py-24">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 Como funciona a consultoria?
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 A consultoria da Fanaxis começa com uma análise detalhada dos seus processos atuais
                 de usinagem. Avaliamos programas, parâmetros de corte, ferramentas, fixações e
                 tempos de ciclo para identificar oportunidades reais de melhoria.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 Nossa abordagem é prática e orientada a resultados: cada recomendação é fundamentada
                 em dados, com metas mensuráveis de redução de custo, tempo e scrap. Trabalhamos lado
                 a lado com sua equipe de programação e operadores para garantir a implementação eficaz.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Com passagem pela B. GROB do Brasil e 20 anos de experiência, Rodrigo Finarde traz
                 conhecimento profundo em máquinas de alto padrão e processos industriais exigentes.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 Para quem é?
               </h2>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-white/70">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Empresas que sentem que seus processos de usinagem estão defasados</span>
@@ -144,9 +144,9 @@ const ConsultoriaUsinagem = () => {
         </section>
 
         {/* Benefícios */}
-        <section className="bg-[#1a1a1a] py-20">
+        <section className="relative bg-secondary py-24 md:py-28">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl mb-12 text-center">
               Benefícios da consultoria Fanaxis
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,9 +176,9 @@ const ConsultoriaUsinagem = () => {
                   desc: "Suporte pós-consultoria para garantir que as melhorias sejam sustentadas e ampliadas ao longo do tempo.",
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-background/50 border border-white/10 rounded-lg p-6">
+                <div key={i} className="group bg-card border border-white/10 p-6 transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
                   <h3 className="font-semibold text-white mb-3">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-white/55 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -186,17 +186,17 @@ const ConsultoriaUsinagem = () => {
         </section>
 
         {/* CTA Final */}
-        <section className="container py-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <section className="page-cta container py-24 md:py-32 text-center">
+          <h2 className="text-2xl md:text-3xl mb-4">
             Transforme seus processos de usinagem
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-8 max-w-2xl mx-auto">
             A Fanaxis oferece consultoria prática e orientada a resultados para empresas que querem
             reduzir custos e aumentar a produtividade na usinagem CNC.
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Agendar diagnóstico gratuito
             <ArrowRight className="w-4 h-4" />

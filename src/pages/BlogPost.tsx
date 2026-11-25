@@ -92,10 +92,10 @@ const BlogPost = () => {
           <span className="text-xs font-mono text-[#FE731A] uppercase tracking-wider">
             {post.category}
           </span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-3 mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white mt-4 mb-6 leading-[1.05]">
             {post.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-gray-400">
+          <div className="flex items-center gap-4 text-sm text-white/55">
             <span>{post.date}</span>
             <span>•</span>
             <span>{post.readTime} min de leitura</span>
@@ -105,7 +105,7 @@ const BlogPost = () => {
         {/* Imagem de capa */}
         {!post.coverImageInContent && (
         <figure className="mb-10">
-          <div className="aspect-video rounded-lg overflow-hidden">
+          <div className="aspect-video overflow-hidden">
             <img
               src={post.coverImage}
               alt={post.coverImageAlt ?? post.title}
@@ -113,7 +113,7 @@ const BlogPost = () => {
             />
           </div>
           {post.coverCaption && (
-            <figcaption className="mt-3 border-l-4 border-[#FE731A] pl-4 text-sm leading-relaxed text-gray-400">
+            <figcaption className="mt-3 border-l-4 border-[#FE731A] pl-4 text-sm leading-relaxed text-white/55">
               {post.coverCaption}{" "}
               {post.coverImageCreditUrl && (
                 <>
@@ -138,19 +138,19 @@ const BlogPost = () => {
             prose-headings:text-white prose-headings:font-bold
             prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-l-4 prose-h2:border-[#FE731A] prose-h2:pl-4
             prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-            prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
-            prose-li:text-gray-300
-            prose-strong:text-[#FE731A]
+            prose-p:text-white/70 prose-p:leading-relaxed prose-p:mb-6
+            prose-li:text-white/70
+            prose-strong:text-white
             prose-a:text-[#FE731A] prose-a:hover:underline"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* CTA */}
-        <div className="mt-16 p-8 bg-secondary/50 border border-[#FE731A]/30 rounded-lg text-center">
+        <div className="mt-16 p-8 relative bg-card border border-white/10 text-center">
           <h3 className="text-2xl font-bold text-white mb-3">
             Quer otimizar seus processos de usinagem?
           </h3>
-          <p className="text-gray-300 mb-6">
+          <p className="text-white/70 mb-6">
             A Fanaxis pode ajudar sua empresa a reduzir custos e aumentar a
             produtividade com digitalização e tecnologia de ponta.
           </p>
@@ -158,7 +158,7 @@ const BlogPost = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#FE731A] hover:bg-[#e55f00] transition px-8 py-3 rounded font-medium text-white"
+            className="inline-block bg-[#FE731A] hover:bg-[#E5620F] transition-colors px-8 py-3.5 font-medium tracking-wide text-white"
           >
             Fale com a Fanaxis
           </a>

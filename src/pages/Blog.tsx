@@ -53,11 +53,11 @@ const Blog = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
-      <section className="container pt-32 pb-20">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+      <section className="page-hero container pt-36 pb-20 md:pb-28">
+        <h1 className="text-5xl md:text-6xl uppercase mb-6 leading-[1.02] text-white">
           Blog <span className="text-[#FE731A]">Fanaxis</span>
         </h1>
-        <p className="text-lg text-gray-300 mb-8 max-w-3xl">
+        <p className="text-lg text-white/70 mb-8 max-w-3xl">
           Artigos sobre usinagem CNC, digitalização de processos, gêmeos
           digitais e otimização de manufatura.
         </p>
@@ -66,10 +66,10 @@ const Blog = () => {
         <div className="flex flex-wrap gap-2 mb-10">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+            className={`px-4 py-2 font-mono text-[11px] tracking-[0.15em] uppercase transition-colors ${
               activeCategory === null
-                ? "bg-[#FE731A] text-white"
-                : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10"
+                ? "bg-[#FE731A] text-white border border-[#FE731A]"
+                : "text-white/55 hover:text-white border border-white/15 hover:border-white/40"
             }`}
           >
             Todos
@@ -78,10 +78,10 @@ const Blog = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 py-2 font-mono text-[11px] tracking-[0.15em] uppercase transition-colors ${
                 activeCategory === cat
-                  ? "bg-[#FE731A] text-white"
-                  : "bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10"
+                  ? "bg-[#FE731A] text-white border border-[#FE731A]"
+                  : "text-white/55 hover:text-white border border-white/15 hover:border-white/40"
               }`}
             >
               {cat}
@@ -94,27 +94,27 @@ const Blog = () => {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="group block bg-secondary/50 border border-border rounded-lg overflow-hidden hover:border-[#FE731A]/60 transition-all duration-300"
+              className="group block bg-secondary/50 border border-border overflow-hidden hover:border-[#FE731A]/60 transition-all duration-300"
             >
               <div className="aspect-video overflow-hidden">
                 <img
                   src={post.coverImage}
                   alt={post.coverImageAlt ?? post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <span className="text-xs font-mono text-[#FE731A] uppercase tracking-wider">
                   {post.category}
                 </span>
-                <h2 className="text-xl font-semibold text-white mt-2 mb-3 group-hover:text-[#FE731A] transition-colors">
+                <h2 className="text-xl text-white mt-2 mb-3 group-hover:text-[#FE731A] transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-sm text-gray-400 line-clamp-3">
+                <p className="text-sm text-white/55 line-clamp-3">
                   {post.excerpt}
                 </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{post.date}</span>
+                  <span className="text-xs text-white/40">{post.date}</span>
                   <span className="text-xs text-[#FE731A] font-medium group-hover:underline">
                     Ler mais →
                   </span>
@@ -125,7 +125,7 @@ const Blog = () => {
         </div>
 
         {filteredPosts.length === 0 && (
-          <p className="text-gray-500 text-center py-12">
+          <p className="text-white/40 text-center py-12">
             Nenhum artigo encontrado nesta categoria.
           </p>
         )}

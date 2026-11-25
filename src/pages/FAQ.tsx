@@ -90,14 +90,14 @@ const FAQ = () => {
       <div className="bg-background text-white min-h-screen">
         <Header />
 
-        <section className="container pt-32 pb-20">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
+        <section className="page-hero container pt-36 pb-20 md:pb-28">
+          <p className="section-kicker mb-6">
             Dúvidas frequentes
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-5xl md:text-6xl uppercase mb-6 leading-[1.02]">
             Perguntas <span className="text-[#FE731A]">Frequentes</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-12 max-w-3xl">
+          <p className="text-lg text-white/70 mb-12 max-w-3xl">
             Tire suas dúvidas sobre programação CAM, gêmeos digitais, consultoria
             e nossos serviços de usinagem CNC.
           </p>
@@ -113,7 +113,7 @@ const FAQ = () => {
                   <AccordionTrigger className="text-left text-white hover:text-[#FE731A] transition-colors py-5">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 pb-5 leading-relaxed">
+                  <AccordionContent className="text-white/70 pb-5 leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -123,15 +123,15 @@ const FAQ = () => {
 
           {/* CTA */}
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2 className="text-2xl mb-4">
               Não encontrou sua dúvida?
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-white/55 mb-8">
               Entre em contato diretamente com nossa equipe.
             </p>
             <Link
               to="/#contato"
-              className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
             >
               Falar com especialista
               <ArrowRight className="w-4 h-4" />

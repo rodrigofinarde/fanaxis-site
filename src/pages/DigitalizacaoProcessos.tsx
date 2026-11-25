@@ -66,14 +66,14 @@ const DigitalizacaoProcessos = () => {
         <Header />
 
         {/* Hero */}
-        <section className="container pt-32 pb-16">
-          <p className="font-mono text-sm tracking-widest uppercase text-[#FE731A] mb-4">
+        <section className="page-hero container pt-36 pb-20 md:pb-28">
+          <p className="section-kicker mb-6">
             Serviços
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl uppercase mb-8 leading-[1.02]">
             Digitalização de <span className="text-[#FE731A]">Processos</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-3xl leading-relaxed">
+          <p className="text-lg text-white/70 mb-8 max-w-3xl leading-relaxed">
             Digitalização de processos de usinagem CNC com foco em Indústria 4.0 e manufatura
             conectada. Mapeamento de fluxos, integração de dados de máquina, rastreabilidade
             de produção e modernização completa da sua fábrica.
@@ -83,7 +83,7 @@ const DigitalizacaoProcessos = () => {
             href="https://wa.me/5511924489409"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Solicitar diagnóstico
             <ArrowRight className="w-4 h-4" />
@@ -91,19 +91,19 @@ const DigitalizacaoProcessos = () => {
         </section>
 
         {/* Descrição detalhada */}
-        <section className="container py-16 border-t border-white/10">
+        <section className="container py-20 md:py-24">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 O que é digitalização de processos?
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 Digitalização de processos na manufatura é a transformação de operações manuais,
                 baseadas em papel e experiência pessoal, em fluxos digitais integrados, rastreáveis
                 e baseados em dados. Inclui desde a digitalização de folhas de processo até a
                 conexão de máquinas CNC com sistemas de gestão.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className="text-white/70 leading-relaxed mb-4">
                 A Fanaxis atua em todas as etapas: mapeamento dos processos existentes, identificação
                 de gargalos, definição de arquitetura digital, integração de dados de máquina e
                 implementação de soluções práticas para modernizar a produção.
@@ -111,10 +111,10 @@ const DigitalizacaoProcessos = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl mb-6">
                 Para quem é?
               </h2>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-white/70">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-[#FE731A] mt-0.5 shrink-0" />
                   <span>Fábricas que ainda dependem de processos manuais e papel no chão de fábrica</span>
@@ -141,9 +141,9 @@ const DigitalizacaoProcessos = () => {
         </section>
 
         {/* Benefícios */}
-        <section className="bg-[#1a1a1a] py-20">
+        <section className="relative bg-secondary py-24 md:py-28">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl mb-12 text-center">
               Benefícios da digitalização
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,9 +173,9 @@ const DigitalizacaoProcessos = () => {
                   desc: "Infraestrutura de dados preparada para aplicações futuras de inteligência artificial na manufatura.",
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-background/50 border border-white/10 rounded-lg p-6">
+                <div key={i} className="group bg-card border border-white/10 p-6 transition-all duration-300 hover:border-white/20 hover:-translate-y-1">
                   <h3 className="font-semibold text-white mb-3">{item.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-white/55 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -183,17 +183,17 @@ const DigitalizacaoProcessos = () => {
         </section>
 
         {/* CTA Final */}
-        <section className="container py-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <section className="page-cta container py-24 md:py-32 text-center">
+          <h2 className="text-2xl md:text-3xl mb-4">
             Modernize sua fábrica com dados
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/70 mb-8 max-w-2xl mx-auto">
             A Fanaxis ajuda empresas a darem o primeiro passo na transformação digital da manufatura
             com soluções práticas e resultados mensuráveis.
           </p>
           <Link
             to="/#contato"
-            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 rounded-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FE731A] hover:bg-[#E5620F] text-white font-medium px-8 py-4 transition-colors tracking-wide"
           >
             Solicitar diagnóstico digital
             <ArrowRight className="w-4 h-4" />
