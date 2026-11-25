@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import TechStrip from "@/components/TechStrip";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import MethodsSection from "@/components/MethodsSection";
@@ -45,6 +46,7 @@ const Index = () => {
 
       <main>
         <HeroSection />
+        <TechStrip />
 
         <section id="servicos">
           <Reveal><ServicesSection /></Reveal>

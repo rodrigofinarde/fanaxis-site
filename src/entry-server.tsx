@@ -2,7 +2,7 @@
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
-import AppRoutes from "./AppRoutes";
+import AppRoutes, { preloadRoute } from "./AppRoutes";
 import { blogPosts } from "./data/blogPosts";
 
 export const routes: string[] = [
@@ -18,7 +18,8 @@ export const routes: string[] = [
   ...blogPosts.map((p) => `/blog/${p.slug}`),
 ];
 
-export function render(url: string) {
+export async function render(url: string) {
+  await preloadRoute(url);
   const helmetContext: { helmet?: HelmetServerState } = {};
   const html = renderToString(
     <HelmetProvider context={helmetContext}>

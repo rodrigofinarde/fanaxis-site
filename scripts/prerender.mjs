@@ -39,7 +39,7 @@ function twitterFromOg(page, head) {
 
 let count = 0;
 for (const url of [...routes, "/404"]) {
-  const { html, head } = render(url);
+  const { html, head } = await render(url);
   if (!html || html.length < 500) throw new Error(`Página vazia na pré-renderização: ${url}`);
 
   const tw = twitterFromOg(dedupe(template, head), head);
