@@ -22,21 +22,22 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
       translate="no"
       role="group"
       aria-label="Idioma / Language"
-      className={`notranslate flex items-center gap-1.5 ${className}`}
+      className={`notranslate flex items-center ${className}`}
     >
-      <Globe className="w-3.5 h-3.5 text-white/40 mr-0.5" aria-hidden="true" />
-      {LANGS.map(({ code, label, name }) => {
+      <Globe className="w-3.5 h-3.5 text-white/40 mr-2.5" aria-hidden="true" />
+      {LANGS.map(({ code, label, name }, i) => {
         const active = code === lang;
         return (
+          <span key={code} className="flex items-center">
+            {i > 0 && <span aria-hidden="true" className="mx-2.5 h-3 w-px bg-white/15" />}
           <button
-            key={code}
             type="button"
             lang={code}
             title={name}
             aria-label={name}
             aria-pressed={active}
             onClick={() => choose(code)}
-            className={`font-mono text-[11px] tracking-wider px-1.5 py-1 transition-colors ${
+            className={`font-mono text-[11px] tracking-wider px-0.5 py-0.5 transition-colors ${
               active
                 ? "text-[#FE731A] border-b border-[#FE731A]"
                 : "text-white/55 hover:text-white border-b border-transparent"
@@ -44,6 +45,7 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
           >
             {label}
           </button>
+          </span>
         );
       })}
     </div>

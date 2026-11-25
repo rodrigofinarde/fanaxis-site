@@ -64,6 +64,17 @@ const Header = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
+      {/* Faixa superior: seletor de idioma no canto direito (some ao rolar) */}
+      <div
+        className={`overflow-hidden transition-all duration-300 border-b ${
+          scrolled ? "max-h-0 opacity-0 border-transparent" : "max-h-9 opacity-100 border-white/[0.06]"
+        }`}
+      >
+        <div className="container flex h-9 items-center justify-end">
+          <LanguageSwitcher />
+        </div>
+      </div>
+
       <div className={`container flex items-center justify-between transition-all duration-300 ${solid ? "h-16" : "h-20"}`}>
 
         {/* LOGO */}
@@ -179,8 +190,6 @@ const Header = () => {
           >
             FAQ
           </Link>
-
-          <LanguageSwitcher className="-mr-2" />
 
           <a
             href={isHomePage ? "/#contato" : "/#contato"}

@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-background pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="relative overflow-hidden bg-background pt-32 pb-20 md:pt-40 md:pb-28">
       {/* Grade milimetrada */}
       <div aria-hidden="true" className="absolute inset-0 bg-blueprint opacity-60" />
       <div aria-hidden="true" className="glow w-[640px] h-[640px] -top-40 right-[-120px] md:right-[5%]" />
